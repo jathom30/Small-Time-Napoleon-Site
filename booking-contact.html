@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Booking/Contact</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <button class="nav-button">destination</button>
+    <ul class="main-nav">
+      <li class="pages selected-page"><a href="index.html">Home</a></li>
+      <li class="pages"><a href="photos.html">Photo</a></li>
+      <li class="pages"><a href="video.html">Video</a></li>
+      <li class="pages"><a href="audio.html">Audio</a></li>
+      <li class="pages"><a href="bio.html">Bio</a></li>
+      <li class="pages"><a href="press.html">Press</a></li>
+      <li class="pages"><a href="calendar.html">Calendar</a></li>
+      <li class="pages"><a href="booking-contact.html">Booking/Contact</a></li>
+    </ul>
+  </header>
+  
+  <h1>Booking Information</h1>
+  <section class="booking-info">
+    <div>
+      <p>Small Time Napoleon has played a variety of events ranging from charity gala's at five star hotels to "hole in the wall" bars and clubs.</p> 
+      <p>The band has performed for intimate audiences of 30 or less to large festival crowds of 3,000 or more.</p> 
+      <p>The dynamic range of the group allows them to fit in at a jazz club like Andy's in Chicago, IL or BB's in St. Louis, MO while also being able to turn up to match the intensity expected at rock shows like Skeletunes in South Bend, IN or the art scene of Thomas, WV.</p>
+      <p>Small Time Napoleon loves what they do and are always interested to learn of new gig opportunities. Feel free to fill out the contact form below with details pertaining to your event and someone from our team will contact you as soon as we are able.</p>
+    </div>
+    <form class="contact-form" action="index.html" method="post">
+        <fieldset class="booking-inqueries">
+          <legend>Booking inqueries</legend>
+        
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="user_name">
+          
+          <label for="name">Phone Number:</label>
+          <input type="phone" id="phone" name="user_phone">
+          
+          <label for="mail">Email:</label>
+          <input type="email" id="mail" name="user_email">
+
+          <label for="bio">Message: </label>
+          <textarea id="bio" name="user_bio"></textarea>
+        </fieldset>
+        <button type="submit">SUBMIT</button>
+      </form>
+    
+  </section>
+  
+  <footer>
+    <p>&copy; 2016 Small Time Napoleon.</p>
+  </footer>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src='js/app.js'></script>
+</body>
+</html>
