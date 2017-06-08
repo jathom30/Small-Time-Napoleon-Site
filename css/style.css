@@ -6,6 +6,7 @@ current page is listed on top, slightly larger
 
 
 /******Main******/
+
 * {
   box-sizing: border-box;
   color: #fbb040;
@@ -19,31 +20,27 @@ a {
 
 body {
   background: rgb(42, 35, 80);
-  height: 100%;
+  background: linear-gradient(rgb(39, 35, 85), rgb(40, 56, 145)10%, rgb(39, 35, 85));
   display: flex;
   flex-direction: column;
+  /*
   background-image: url('/img/bluebackground-01.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+*/
 }
 
 .content {
   min-height: 100%;
 }
 
-.section h2 {
-  margin: 2px;
-}
-
 p {
-  margin: 5px;
+  margin: 1.5%;
 }
 
 footer {
   text-align: center;
-  width: 100%;
-  height: 30px;
 }
 
 .name-logo {
@@ -65,23 +62,19 @@ footer {
 
 
 /********TO PAGE LINKS**********/
+
 .to-more-pages {
   text-transform: uppercase;
   font-size: .7em;
   display: block;
   text-align: right;
-  padding: 5px;
+  padding: 2%;
 }
 
-.photo h2,
-.video h2,
-.audio h2,
-.bio h2,
-.press h2,
-.calendar h2,
-.booking-contact h2 {
+.section h2 {
+  margin: 1%;
   cursor: pointer;
-  padding: 5px;
+  padding: 1.5%;
 }
 
 .section h2:hover {
@@ -90,6 +83,7 @@ footer {
 
 
 /********NAV**********/
+
 .main-nav {
   padding: 10px;
   display: flex;
@@ -111,7 +105,7 @@ footer {
   padding: 10px;
   margin: 6px;
   border-radius: 10px;
-  box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
+  box-shadow: 0 1.5px 0 0 rgba(0, 0, 0, 0.1);
   text-transform: uppercase;
 }
 
@@ -137,36 +131,40 @@ header {
   flex-direction: column;
 }
 
+
 /********HOME(LOGO)*********/
+
 #new-album-info {
   background: linear-gradient(to bottom, rgba(14, 12, 29, 0), rgba(14, 12, 29, 0.2)15%, rgba(14, 12, 29, 0.2)85%, rgba(14, 12, 29, 0));
-  padding: 15px;
-  margin-bottom: 5px;
+  padding: 3%;
+  margin-bottom: 2%;
 }
 
 #new-album-info h1 {
   font-size: 2em;
-  padding: 5px;
+  padding: 1%;
 }
 
 #new-album-info p {
-  margin-top: 10px;
+  margin-top: 4%;
 }
 
+
 /********SECTION IMAGES**********/
+
 .section {
   border-bottom: 1px dotted #fbb040;
-    margin: 0 5px;
+  margin: 0 1.25%;
 }
 
 .section img {
   max-width: 100%;
   border: 1px solid #fbb040;
-  box-shadow: 0 2px 0 0 rgba(0,0,0,0.25);
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.25);
 }
 
 .section div {
-  margin: 0 5px;
+  margin: 0 1.25%;
 }
 
 #logo {
@@ -181,32 +179,35 @@ header {
 
 
 /********Page Tabs**********/
+
 .pageSelectors {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+
 /********PHOTO GALLERY**********/
+
 #image-gallery {
   display: flex;
   flex-direction: column;
 }
 
-#image-gallery ul{
+#image-gallery ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
-  padding: 0px 10px 10px 10px;
+  padding: 2%;
 }
 
 .photo ul li {
   list-style: none;
-  width: 110px;
+  width: 30%;
   justify-content: space-between;
-  padding: 5px;
+  padding: 1.25%;
 }
 
 .bio-page img {
@@ -219,55 +220,52 @@ header {
 
 #overlay {
   width: 100%;
-  height: 100%;
+  height: 125%;
   position: absolute;
   top: 0;
   left: 0;
   display: none;
   text-align: center;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.53);
 }
 
 #overlay img {
-  width: 90%;
-  margin-top: 40%;
-  box-shadow: 0 2px 0 0 rgba(0,0,0,0.25);
+  width: 100%;
+  margin-top: 80%;
+  border-left: 40px solid rgba(42, 35, 80, 0.93);
+  border-right: 40px solid rgba(42, 35, 80, 0.93);
 }
 
 #overlay p {
-  background: rgba(42, 35, 80, 0.63);
+  background: rgba(42, 35, 80, 0.93);
   color: #fdc571;
   margin: auto;
-  padding: 5px;
-  width: 50%;
+  padding: 1.25%;
+  width: 100%;
   text-align: center;
-  border-radius: 10px;
 }
 
 
 /********VIDEO**********/
-.video video{
+
+.video video {
   display: flex;
   flex-flow: column wrap;
   margin: auto;
-  border-radius: 5px; 
+  border-radius: 3px;
 }
 
 
-
 /********AUDIO**********/
-.music-content {
+
+.music-player {
   display: flex;
   flex-direction: column;
 }
 
-.music-player {
-  margin: 10px;
-  align-items: center;
-}
-
 
 /********BIO**********/
+
 .bio-page p {
   padding: 0 15px;
 }
@@ -295,6 +293,7 @@ header {
 
 
 /********PRESS AND PERFORMANCE**********/
+
 .press-content ul {
   display: flex;
   flex-flow: column wrap;
@@ -303,22 +302,24 @@ header {
 .press-content li {
   list-style: none;
   text-align: right;
-  margin-bottom: 20px;
+  margin-bottom: 5%;
   font-weight: 800;
 }
 
 .press-content li a {
   text-transform: uppercase;
+  padding: 1.25%;
 }
 
 .press-content li a:hover {
   font-weight: 400;
   background: rgba(14, 12, 29, 0.2);
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 
 /********CALENDAR**********/
+
 .calendar-content {
   display: flex;
   flex-flow: column wrap;
@@ -326,11 +327,12 @@ header {
 
 .calendar-content iframe {
   margin: auto;
-  margin-bottom: 10px;
+  margin-bottom: 5%;
 }
 
 
 /********BOOKING/CONTACT**********/
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -339,23 +341,23 @@ header {
 .booking-inqueries,
 .contact-inqueries {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 5%;
 }
 
 .booking-inqueries label,
 .contact-inqueries label {
-  padding: 5px;
+  padding: 1.25%;
 }
 
-.booking-inqueries input,
-.contact-inqueries input {
+.contact-inqueries input,
+.contact-inqueries textarea {
   width: 100%;
   justify-content: center;
-  color: rgb(42,35,80);
+  color: rgb(42, 35, 80);
 }
 
 .booking-inqueries textarea,
-.contact-inqueries textarea { 
+.contact-inqueries textarea {
   width: 100%;
 }
 
@@ -363,19 +365,20 @@ header {
   background: #fbb040;
   color: rgb(42, 35, 80);
   border-width: 0px;
-  padding: 10px;
+  padding: 2%;
   font-size: 1em;
-  border-radius: 5px;
+  border-radius: 3px;
   width: 75%;
   margin: auto;
-  margin-bottom: 20px;
+  margin-bottom: 5%;
   cursor: pointer;
 }
 
 
 /*********Social Media Icons*********/
+
 .social-media {
-  padding: 40px 0;
+  padding: 10% 0;
 }
 
 .social-media ul {
@@ -389,7 +392,7 @@ header {
 
 .social-media ul li {
   list-style: none;
-  padding: 0 5px;
+  padding: 0 1.25%;
   text-align: center;
 }
 
@@ -403,8 +406,8 @@ header {
 }
 
 
-
 /*********Pop-Up Content*********/
+
 #pop-up {
   text-align: center;
   height: 15%;
@@ -415,15 +418,15 @@ header {
   top: 50%;
   left: 5%;
   background: rgba(232, 243, 255, 0.85);
-  padding: 10px;
-  border-radius: 10px;
+  padding: 3%;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   box-shadow: 0px 10px 10px rgba(1, 1, 1, 0.6);
 }
 
-#pop-up h1, 
-#pop-up p, 
+#pop-up h1,
+#pop-up p,
 #pop-up button {
   color: #c18b3b;
   margin: auto;
@@ -431,7 +434,46 @@ header {
 
 #pop-up button {
   width: 50%;
-  padding: 5px;
+  padding: 1.25%;
 }
 
-
+/***********media query for small mobile screens in portrait*************/
+@media only screen and (min-device-width: 320px) and (max-device-width: 736px) and (orientation: portrait) {
+  .section {
+    border-bottom: 3px dotted #fbb040;
+  }
+  /**********Adjustments to text on index page***********/
+  h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 2.5em;
+  }
+  p {
+    font-size: 1.75em;
+  }
+  .photo p {
+    font-size: 1.75em;
+  }
+  #new-album-info h1 {
+    font-size: 4em;
+    padding: 1%;
+  }
+  #new-album-info p {
+    margin-top: 4%;
+  }
+  .contact-inqueries {
+    font-size: 2em;
+  }
+  .contact-inqueries input,
+  .contact-inqueries textarea {
+    font-size: 2em;
+  }
+  /**********Adjustments to Photos overlay on Index***********/
+  #overlay {
+    height: 200%;
+  }
+  #overlay img {
+    margin-top: 100%;
+  }
+}
