@@ -29,97 +29,64 @@ $('.photoButton').click(function () {
 
 //////Video Page//////
 //hide extra videos
-$('.videoSubsection').hide();
+$('.moreCoverVideos').hide();
+$('.moreWitzkeVideos').hide();
+$('.moreLivingRoomVideos').hide();
 
+//slideToggle extra video divs
+$('.videoMoreButton').click(function () {
+  $(this).prev().slideToggle();
 
-//hide extra info for videos
-$('.videoNavAndInfo p').hide();
-
-//hover and click for more videos
-$('#coversVideoButton').hover(function () {
-  $('#coversInfo').show();
-}, function () {
-  $('#coversInfo').hide();
-});
-
-$('#coversVideoButton').click(function () {
-  $('#coverVideos').slideToggle();
-  $('#witzkeVideos').slideUp();
-  $('#mtsuVideos').slideUp();
-  $('#livingRoomVideos').slideUp();
+  if ($(this).text() === 'show more') {
+    $(this).text('show less');
+  } else {
+    $(this).text('show more');
+  }
 });
 
 
-$('#witzkeVideoButton').hover(function () {
-  $('#witzkeInfo').show();
-}, function () {
-  $('#witzkeInfo').hide();
-});
+var $videoOverlay = $('<div id="videoOverlay"></div>');
+var $popUpVideo = $('<div id="popUpVideo"></div>');
+var videoHtml = '<iframe width="560" height="315" src="';
 
-$('#witzkeVideoButton').click(function () {
-  $('#witzkeVideos').slideToggle();
-  $('#mtsuVideos').slideUp();
-  $('#livingRoomVideos').slideUp();
-  $('#coverVideos').slideUp();
-});
+$('body').append($videoOverlay);
+$videoOverlay.hide();
 
+//image click sends to youtube video
+$('.videos img').click(function(evt) {
+  evt.preventDefault();
 
-$('#mtsuVideoButton').hover(function () {
-  $('#witzkeInfo').show();
-}, function () {
-  $('#witzkeInfo').hide();
-});
-
-$('#mtsuVideoButton').click(function () {
-  $('#mtsuVideos').slideToggle();
-  $('#witzkeVideos').slideUp();
-  $('#livingRoomVideos').slideUp();
-  $('#coverVideos').slideUp();
-});
-
-
-$('#livingRoomVideoButton').hover(function () {
-  $('#witzkeInfo').show();
-}, function () {
-  $('#witzkeInfo').hide();
-});
-
-$('#livingRoomVideoButton').click(function () {
-  $('#livingRoomVideos').slideToggle();
-  $('#witzkeVideos').slideUp();
-  $('#mtsuVideos').slideUp();
-  $('#coverVideos').slideUp();
-});
-
-
-////open selected div and close all others
-//var sectionButton = document.querySelectorAll('.section h2');
-//$(sectionButton).click(function () {
-//
-//  //get this clicked header and open its next sibling
-//  var $clicked = $(this).get(0);
-//  var opened = $clicked.nextSibling.nextSibling;
-//  $(opened).slideToggle();
-//
-//  //get parent of opened div and closes siblings children's divs
-//  var parent = opened.parentElement;
-//  var $others = $(parent).siblings();
-//  $others.children('div').slideUp();
-//
-//});
-
-//image click sends to youtube video, need to stop default and create popup
-$('.videos img').click(function() {
-  var url = 'http://youtube.com/watch?v=';
+  //create and set url for vid
+  var url = 'https://www.youtube.com/embed/';
   url += $(this).attr('alt');
-  console.log(url);
   this.parentElement.setAttribute('href', url);
+
+  //create popup
+  videoHtml = '<iframe width="560" height="315" src="';
+  videoHtml += url;
+  videoHtml += '" frameborder="0" allowfullscreen>';
+  videoHtml += '</iframe>';
+
+  $popUpVideo.append(videoHtml);
+  $videoOverlay.append($popUpVideo);
+  $videoOverlay.show();
+
 });
 
-$('#coverText').hide();
+//hide overlay and video when clicked
+$videoOverlay.click(function() {
+  $videoOverlay.hide();
+  $('iframe').remove();
+});
 
-$('.test').hover(function () {
-  $('#coverText').show();
+
+//create and hide video titles for mouseover
+$('.coverText').hide();
+
+$('.videos img').hover(function () {
+  $(this).siblings('div').show();
 }, function () {
-  $('#coverText').hide();
+  $('.coverText').hide();
 });
+
+

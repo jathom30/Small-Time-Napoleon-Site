@@ -73,7 +73,6 @@ $overlay.click(function () {
 });
 
 
-
 //Pop-up Content
 const $popUp = $('#pop-up');
 const $facebookLikeButton = $('.facebook-like');

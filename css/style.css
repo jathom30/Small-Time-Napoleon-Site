@@ -114,7 +114,7 @@ header {
   border-top: 1px solid #fbb040;
 }
 
-.photoPage p {
+.photoButton {
   text-align: center;
   padding: 1%;
   background: rgba(14, 12, 29, 0.2);
@@ -124,7 +124,7 @@ header {
   border-radius: 3px;
 }
 
-.photoPage p:hover {
+.photoButton:hover {
   background: rgba(14, 12, 29, 0.57);
   cursor: pointer;
 }
@@ -132,34 +132,21 @@ header {
 
 /*********VIDEO Page***********/
 
-.videoNav {
-  display: flex;
-  flex-flow: row wrap;
-  align-content: space-around;
-  align-items: center;
-}
-
-.videoNav h2 {
-  text-align: center;
-  flex: 1;
-  margin: 1%;
-  padding: 3px;
-
-}
-
-#coversInfo,
-#witzkeInfo {
-  margin: auto;
-  padding: 5%;
-  text-align: center;
-  background: rgba(42, 35, 80, 0.93);
-  position: absolute;
-  width: 100%;
+h3 {
+  padding: 3%;
 }
 
 .videos {
   display: flex;
   flex-direction: column;
+}
+
+#highlightedVideos,
+#coverVideos,
+#witzkeVideos,
+#mtsuVideos,
+#livingRoomVideos {
+    border-top: 1px solid #fbb040;
 }
 
 .videos img {
@@ -168,19 +155,104 @@ header {
 
 .videos img:hover {
   cursor: pointer;
-  box-shadow: 0 2px 5px 5px rgba(14, 12, 29, 0.2);
 }
 
-#highlightedVideos {
+.individualVideos {
   position: relative;
+  margin-bottom: -1%;
 }
 
-#coverText {
+.coverText {
+  pointer-events: none;
   position: absolute;
   text-align: center;
   width: 100%;
-  top: 45%;
+  top: 30%;
+  background: rgba(0,0,0,.8);
+  padding-top: 1.5%;
+}
+
+.coverText h3 {
+  color: #fbb040;
+  font-size: 1.5em;
+  font-weight: 800;
+  padding: 0;
+}
+
+.coverText p {
+  color: #fbb040;
+  font-weight: 200;
+}
+
+#videoOverlay {
+  width: 100%;
+  height: 275%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#popUpVideo {
+  position: fixed;
+  top: 40%;
+  left: 5%;
+  right: 5%;
+  z-index: 10;
+}
+
+#popUpVideo iframe {
+  width: 100%;
+}
+
+.videoMoreButton {
+  text-align: center;
+  padding: 1%;
+  background: rgba(14, 12, 29, 0.2);
+  width: 50%;
+  margin: auto;
+  margin-top: 2%;
+  border-radius: 3px;
+}
+
+.videoMoreButton:hover {
+  background: rgba(14, 12, 29, 0.57);
+  cursor: pointer;
 }
 
 
 
+
+/*********BIO Page***********/
+h1 {
+  padding: 2%;
+}
+
+.bio-page p {
+  padding: 2% 3%;
+}
+
+.member-list {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 3%;
+}
+
+.member-list ul {
+  padding: 0px;
+  margin: auto;
+}
+
+.member-list li {
+  list-style: none;
+  padding: 5px;
+  text-align: center;
+}
+
+
+.bio-page img {
+  width: 100%;
+  border-top: 1px solid #fbb040;
+}

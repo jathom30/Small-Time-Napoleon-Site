@@ -219,18 +219,15 @@ header {
   left: 0;
   display: none;
   text-align: center;
-  background: rgba(255, 255, 255, 0.53);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 #overlay img {
   width: 100%;
   margin-top: 80%;
-  border-left: 40px solid rgba(42, 35, 80, 0.93);
-  border-right: 40px solid rgba(42, 35, 80, 0.93);
 }
 
 #overlay p {
-  background: rgba(42, 35, 80, 0.93);
   color: #fdc571;
   margin: auto;
   padding: 1.25%;
