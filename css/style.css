@@ -33,40 +33,23 @@ footer {
 
 /********NAV**********/
 
-.main-nav {
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  display: flex;
-  margin-top: -5px;
-}
-
-.main-nav li {
-  text-decoration: none;
-  list-style: none;
+.main-nav h2 {
   text-align: center;
+  margin: 1%;
+  cursor: pointer;
+  padding: 1.5%;
+  border-bottom: 1px dotted #fbb040;
 }
 
-.pages {
-  font-size: 1.25em;
+.main-nav h2:hover {
   background: rgba(14, 12, 29, 0.2);
-  padding: 10px;
-  margin: 6px;
-  border-radius: 3px;
-  box-shadow: 0 1.5px 0 0 rgba(0, 0, 0, 0.1);
-  text-transform: uppercase;
-}
-
-.pages a {
-  display: block;
-  letter-spacing: 8px;
+  cursor: pointer;
 }
 
 .nav-button {
   text-align: center;
   padding: 10px;
-  background: rgba(14, 12, 29, 0.2);
+  background: none;
   border: none;
   font-size: 1.25em;
   letter-spacing: 1em;
@@ -74,14 +57,26 @@ footer {
   text-transform: uppercase;
 }
 
-.nav-button:hover {
+.nav-button:hover,
+#navArrow:hover {
   cursor: pointer;
-  background: rgba(14, 12, 29, 0.32);
+  filter: brightness(130%);
 }
 
 header {
   display: flex;
   flex-direction: column;
+}
+
+#navArrow {
+  width: 20%;
+  margin: auto;
+  padding: 3% 0;
+}
+
+.arrowSelected {
+  transform:scaleY(-1);
+  transition: .8s;
 }
 
 
@@ -129,6 +124,30 @@ header {
   cursor: pointer;
 }
 
+#photoOverlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#photoOverlay img {
+  margin: auto;
+  margin-top: 50%;
+  width: 98%;
+}
+
+#photoOverlay p {
+  color: #fdc571;
+  margin: auto;
+  padding: 1.25%;
+  width: 100%;
+  text-align: center;
+}
 
 /*********VIDEO Page***********/
 
@@ -186,8 +205,8 @@ h3 {
 
 #videoOverlay {
   width: 100%;
-  height: 275%;
-  position: absolute;
+  height: 100%;
+  position: fixed;
   top: 0;
   left: 0;
   display: none;
@@ -226,6 +245,7 @@ h3 {
 
 
 /*********BIO Page***********/
+
 h1 {
   padding: 2%;
 }
@@ -255,4 +275,47 @@ h1 {
 .bio-page img {
   width: 100%;
   border-top: 1px solid #fbb040;
+}
+
+
+/*********PRESS AND PERFORMANCE Page***********/
+
+.pressContent,
+.performanceContent {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 5%;
+
+}
+
+.pressAndPerformance img {
+  width: 100%;
+  border-bottom: 1px solid #fbb040;
+  border-top: 1px solid #fbb040;
+}
+
+.pressContent li,
+.performanceContent li {
+  list-style-type: none;
+  text-align: right;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 1.25%;
+}
+
+.pressAndPerformance h2 {
+  padding: 2%;
+  margin-top: 1.5%;
+}
+
+.article,
+.performance {
+  border: 1px solid #fbb040;
+  background: rgba(0,0,0,.2);
+  padding: 2%;
+  margin-bottom: 5%;
+}
+
+.article:hover {
+  filter: brightness(120%);
 }

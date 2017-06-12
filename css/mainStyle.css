@@ -1,15 +1,8 @@
-/*
-nav hidden in moble until button is pressed.
-takes full screen, background darkened
-current page is listed on top, slightly larger
-*/
-
-
 /******Main******/
 
 * {
   box-sizing: border-box;
-  color: #fbb040;
+  color: #fbb141;
   font-family: 'Josefin Sans', sans-serif;
   margin: 0;
 }
@@ -64,6 +57,10 @@ footer {
   padding: 2%;
 }
 
+.to-more-pages a:hover {
+  color: #ffca7b;
+}
+
 .section h2 {
   margin: 1%;
   cursor: pointer;
@@ -75,62 +72,11 @@ footer {
 }
 
 
-/********NAV**********/
-
-.main-nav {
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  display: flex;
-  margin-top: -5px;
-}
-
-.main-nav li {
-  text-decoration: none;
-  list-style: none;
-  text-align: center;
-}
-
-.pages {
-  font-size: 1.25em;
-  background: rgba(14, 12, 29, 0.2);
-  padding: 10px;
-  margin: 6px;
-  border-radius: 10px;
-  box-shadow: 0 1.5px 0 0 rgba(0, 0, 0, 0.1);
-  text-transform: uppercase;
-}
-
-.pages a {
-  display: block;
-  letter-spacing: 8px;
-}
-
-.nav-button {
-  text-align: center;
-  padding: 10px;
-  background: rgba(14, 12, 29, 0.2);
-  border: none;
-  border-radius: 10px;
-  font-size: 1.25em;
-  letter-spacing: 1em;
-  width: 100%;
-  text-transform: uppercase;
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-}
-
-
 /********HOME(LOGO)*********/
 
 #new-album-info {
   background: linear-gradient(to bottom, rgba(14, 12, 29, 0), rgba(14, 12, 29, 0.2)15%, rgba(14, 12, 29, 0.2)85%, rgba(14, 12, 29, 0));
-  padding: 3%;
-  margin-bottom: 2%;
+  padding: 1%;
 }
 
 #new-album-info h1 {
@@ -180,6 +126,37 @@ header {
 }
 
 
+/*********Social Media Icons*********/
+
+.social-media {
+  padding: 1%;
+  margin-bottom: 2%;
+}
+
+.social-media ul {
+  display: flex;
+  padding: 0px;
+  align-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+
+.social-media ul li {
+  list-style: none;
+  padding: 0 1%;
+  text-align: center;
+}
+
+.social-media img {
+  border-radius: 22%;
+  width: 75%;
+}
+
+.social-media img:hover {
+  filter: brightness(120%);
+}
+
+
 /********************PHOTO************************/
 
 #image-gallery {
@@ -196,11 +173,15 @@ header {
   padding: 2%;
 }
 
+#image-gallery img {
+  border: none;
+}
+
 .photo ul li {
   list-style: none;
-  width: 30%;
-  justify-content: space-between;
-  padding: 1.25%;
+  width: 50%;
+  justify-content: space-around;
+  margin-bottom: -4px;
 }
 
 .bio-page img {
@@ -213,8 +194,8 @@ header {
 
 #overlay {
   width: 100%;
-  height: 125%;
-  position: absolute;
+  height: 100%;
+  position: fixed;
   top: 0;
   left: 0;
   display: none;
@@ -284,27 +265,27 @@ header {
 
 /********PRESS AND PERFORMANCE**********/
 
-.press-content ul {
+.press-content {
   display: flex;
   flex-flow: column wrap;
 }
 
 .press-content li {
-  list-style-type: disc;
+  list-style-type: none;
   text-align: right;
-  margin-bottom: 5%;
   font-weight: 800;
-}
-
-.press-content li a {
   text-transform: uppercase;
   padding: 1.25%;
 }
 
-.press-content li a:hover {
-  font-weight: 400;
-  background: rgba(14, 12, 29, 0.2);
-  border-radius: 3px;
+#article {
+  border: 1px solid #fbb040;
+  padding: 2%;
+  margin-bottom: 5%;
+}
+
+#article:hover {
+  filter: brightness(120%);
 }
 
 
@@ -362,36 +343,6 @@ header {
   margin: auto;
   margin-bottom: 5%;
   cursor: pointer;
-}
-
-
-/*********Social Media Icons*********/
-
-.social-media {
-  padding: 10% 0;
-}
-
-.social-media ul {
-  display: flex;
-  padding: 0px;
-  align-content: space-between;
-  width: 80%;
-  margin: auto;
-}
-
-.social-media ul li {
-  list-style: none;
-  padding: 0 1.25%;
-  text-align: center;
-}
-
-.social-media img {
-  border-radius: 22%;
-  width: 75%;
-}
-
-.social-media img:hover {
-  box-shadow: 0 2px 5px 5px rgba(14, 12, 29, 0.2);
 }
 
 

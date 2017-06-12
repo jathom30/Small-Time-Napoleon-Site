@@ -91,3 +91,8 @@ $facebookLikeButton.click(function () {
 $cancelPopUp.click(function () {
   $popUp.hide();
 });
+
+//Press Articles
+$('#article').click(function() {
+  $(this).children('a');
+})

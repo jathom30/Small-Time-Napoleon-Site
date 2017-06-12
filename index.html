@@ -9,21 +9,6 @@
 
 <body>
 
-  <!---NAV not used on homepage--->
-  <!--  <header>
-    <button class="nav-button">destination</button>
-    <ul class="main-nav">
-      <li class="pages selected-page"><a href="#home">Home</a></li>
-      <li class="pages"><a href="#photo">Photo</a></li>
-      <li class="pages"><a href="#video">Video</a></li>
-      <li class="pages"><a href="#audio">Audio</a></li>
-      <li class="pages"><a href="#bio">Bio</a></li>
-      <li class="pages"><a href="#press">Press</a></li>
-      <li class="pages"><a href="#calendar">Calendar</a></li>
-      <li class="pages"><a href="#booking-contact">Booking/Contact</a></li>
-    </ul>
-  </header>
-  -->
 
   <!--POPUP div-->
   <!--
@@ -34,6 +19,7 @@
     <button class="cancel-pop-up">No</button>
   </div>
 -->
+
 
   <div class="content">
     <img class="name-logo" src="img/smallTimeNapoleonNameLogo.png">
@@ -51,28 +37,41 @@
 
     <section class="pageSelectors">
 
+      <!----SOCIAL MEDIA---->
+      <section class="social-media">
+        <ul>
+          <li>
+            <a href="http://facebook.com/smalltimenapoleonband"><img src="socialMediaLogos/fb-art-gold.png" alt="facebook link"></a>
+          </li>
+          <li>
+            <a href="http://twitter.com/stnapoleonband"><img src="socialMediaLogos/Twitter-icon-gold.png" alt="twitter link"></a>
+          </li>
+          <li>
+            <a href="http://instagram.com/smalltime_napoleon"><img src="socialMediaLogos/instagram-gold.png" alt="instagram link"></a>
+          </li>
+          <li>
+            <a href="http://youtube.com/stnapoleonband"><img src="socialMediaLogos/youtube-copy-gold.png" alt="youtube link"></a>
+          </li>
+
+        </ul>
+      </section>
+
       <!----PHOTO---->
       <section class="photo section">
         <h2>Photos</h2>
         <div id="image-gallery">
           <ul>
             <li>
-              <a href="img/ADSC_0355SQUARE.jpg"><img src="img/ADSC_0355SQUARE.jpg" alt="Jeff singing at Uncle Slayton's, 2013"></a>
+              <a href="photoPageImg/Meredith%20Chase-Wedding%20Photos-0263.jpg"><img src="photoPageImg/CROPMeredith%20Chase-Wedding%20Photos-0263.jpg" alt=""></a>
             </li>
             <li>
-              <a href="img/ADSC_0359SQUARE.jpg"><img src="img/ADSC_0359SQUARE.jpg" alt="Dan singing at Uncle Slayton's, 2013"></a>
+              <a href="photoPageImg/T2A08488SILK71.jpg"><img src="photoPageImg/CROPT2A08488SILK71.jpg" alt=""></a>
             </li>
             <li>
-              <a href="img/DSC_5842editSQUARE.jpg"><img src="img/DSC_5842editSQUARE.jpg" alt="Jeff before 'Cloud Machine' CD release at the Clifton Center, 2015"></a>
+              <a href="photoPageImg/T2A08517SILK71.jpg"><img src="photoPageImg/CROPT2A08517SILK71.jpg" alt=""></a>
             </li>
             <li>
-              <a href="img/DSC_5862editSQUARE.jpg"><img src="img/DSC_5862editSQUARE.jpg" alt="Dave and Dan before 'Cloud Machine' CD release at the Clifton Center, 2015"></a>
-            </li>
-            <li>
-              <a href="img/DSC_6064editSQUARE.jpg"><img src="img/DSC_6064editSQUARE.jpg" alt="Band during 'Cloud Machine' CD release at the Clifton Center, 2015"></a>
-            </li>
-            <li>
-              <a href="img/DSC_6092editSQUARE.jpg"><img src="img/DSC_6092editSQUARE.jpg" alt="Band during 'Cloud Machine' CD release at the Clifton Center, 2015"></a>
+              <a href="photoPageImg/IMG_0022.jpg"><img src="photoPageImg/CROPIMG_0022.jpg" alt="The band with the Louisville Mayor, 2015"></a>
             </li>
           </ul>
           <p class="to-more-pages"><a href="photos.html">More Photos</a></p>
@@ -124,12 +123,28 @@
         <h2>Press and Performance</h2>
         <div class="press-content">
           <ul>
-            <p>NPR's World Cafe invites Louisville's WFPK to pick the city's top five best bands.</p>
-            <li><a href="http://www.npr.org/sections/world-cafe/2014/02/20/280175875/louisvilles-5-best-local-acts">NPR: Louisville's 5 Best Acts</a></li>
-            <p>Insider Louisville discusses STN's retro style and forward-looking ideas.</p>
-            <li><a href="https://insiderlouisville.com/lifestyle_culture/music/big-time-discovery-small-time-napoleon/">Insider Louisville: Big Time Discovery</a></li>
-            <p>The band's debut single reaches number 54 on their yearly top 100 list.</p>
-            <li><a href="http://wfpk.org/2013/best-songs-of-2013-countdown/">WFPK: Best Songs of 2013</a></li>
+
+            <div id="article">
+              <a href="http://www.npr.org/sections/world-cafe/2014/02/20/280175875/louisvilles-5-best-local-acts">
+                <p>NPR's World Cafe invites Louisville's WFPK to pick the city's top five best bands.</p>
+                <li>NPR: Louisville's 5 Best Acts</li>
+              </a>
+            </div>
+
+            <div id="article">
+              <a href="https://insiderlouisville.com/lifestyle_culture/music/big-time-discovery-small-time-napoleon/">
+                <p>Insider Louisville discusses STN's retro style and forward-looking ideas.</p>
+                <li>Insider Louisville: Big Time Discovery</li>
+              </a>
+            </div>
+
+            <div id="article">
+              <a href="http://wfpk.org/2013/best-songs-of-2013-countdown/">
+                <p>The band's debut single reaches number 54 on their yearly top 100 list.</p>
+                <li>WFPK: Best Songs of 2013</li>
+              </a>
+            </div>
+
           </ul>
           <p class="to-more-pages"><a href="press.html">More Press and Performances</a></p>
         </div>
@@ -174,24 +189,8 @@
     </section>
 
 
-    <!----SOCIAL MEDIA---->
-    <section class="social-media">
-      <ul>
-        <li>
-          <a href="http://facebook.com/smalltimenapoleonband"><img src="socialMediaLogos/fb-art-gold.png" alt="facebook link"></a>
-        </li>
-        <li>
-          <a href="http://twitter.com/stnapoleonband"><img src="socialMediaLogos/Twitter-icon-gold.png" alt="twitter link"></a>
-        </li>
-        <li>
-          <a href="http://instagram.com/smalltime_napoleon"><img src="socialMediaLogos/instagram-gold.png" alt="instagram link"></a>
-        </li>
-        <li>
-          <a href="http://youtube.com/stnapoleonband"><img src="socialMediaLogos/youtube-copy-gold.png" alt="youtube link"></a>
-        </li>
 
-      </ul>
-    </section>
+
   </div>
 
   <!----FOOTER---->

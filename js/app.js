@@ -1,14 +1,27 @@
 const $navButton = $('.nav-button');
 const $nav = $('.main-nav');
+const $navArrow = $('#navArrow');
 
 $nav.hide();
 $navButton.click(function () {
   $nav.slideToggle();
+  $navArrow.toggleClass('arrowSelected');
+
 })
+
+$navArrow.click(function () {
+  $nav.slideToggle();
+  $navArrow.toggleClass('arrowSelected');
+})
+
+//flip arrow as needed
+
 
 var currentPage = $(document).find('title').text();
 
 $navButton.text(currentPage);
+
+
 
 
 //////Photo Page//////
@@ -25,6 +38,46 @@ $('.photoButton').click(function () {
     $(this).text('show more');
   }
 });
+
+//Light-box for photos
+var $overlay = $('<div id="photoOverlay"></div>');
+var $image = $('<img>');
+var $caption = $('<p></p>');
+
+//an image to overlay
+$overlay.append($image);
+
+//add overlay
+$('body').append($overlay);
+
+//a caption to overlay
+$overlay.append($caption);
+
+//capture click event on a link to an image
+$('.photoPage a').click(function (event) {
+  event.preventDefault();
+
+  //add alt attribute as the caption
+  var captionText = $(this).children('img').attr('alt');
+  $caption.text(captionText);
+
+
+
+  var imageLocation = $(this).attr('href');
+  //update overlay with the image linked in the link
+  $image.attr('src', imageLocation);
+
+  //show the overlay
+  $overlay.show();
+});
+
+//when overlay is clicked
+$overlay.click(function () {
+  //hide overlay
+  $overlay.hide();
+});
+
+
 
 
 //////Video Page//////
@@ -53,7 +106,7 @@ $('body').append($videoOverlay);
 $videoOverlay.hide();
 
 //image click sends to youtube video
-$('.videos img').click(function(evt) {
+$('.videos img').click(function (evt) {
   evt.preventDefault();
 
   //create and set url for vid
@@ -74,7 +127,7 @@ $('.videos img').click(function(evt) {
 });
 
 //hide overlay and video when clicked
-$videoOverlay.click(function() {
+$videoOverlay.click(function () {
   $videoOverlay.hide();
   $('iframe').remove();
 });
@@ -88,5 +141,3 @@ $('.videos img').hover(function () {
 }, function () {
   $('.coverText').hide();
 });
-
-
