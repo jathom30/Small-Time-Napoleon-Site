@@ -2,25 +2,47 @@ const $navButton = $('.nav-button');
 const $nav = $('.main-nav');
 const $navArrow = $('#navArrow');
 
+//add overlay when nav is extended
+var $navOverlay = $('<div class="navOverlay"></div>');
+var $header = $('header');
+
+$('body').append($navOverlay);
+
+
 $nav.hide();
+//flip arrow as needed
 $navButton.click(function () {
   $nav.slideToggle();
   $navArrow.toggleClass('arrowSelected');
-
-})
+  $navOverlay.toggleClass('navSelected');
+  if ($navOverlay.hasClass('navSelected')) {
+    $navOverlay.show();
+  } else{
+    $navOverlay.hide();
+  }
+});
 
 $navArrow.click(function () {
   $nav.slideToggle();
   $navArrow.toggleClass('arrowSelected');
-})
+  $navOverlay.toggleClass('navSelected');
+  if ($navOverlay.hasClass('navSelected')) {
+    $navOverlay.show();
+  } else{
+    $navOverlay.hide();
+  }
+});
 
-//flip arrow as needed
+$navOverlay.click(function() {
+  $navOverlay.hide();
+  $nav.slideUp();
+  $navArrow.removeClass('arrowSelected');
+  $navOverlay.removeClass('navSelected');
+});
 
-
+//assign current page title to the nav button
 var currentPage = $(document).find('title').text();
-
 $navButton.text(currentPage);
-
 
 
 
@@ -123,7 +145,6 @@ $('.videos img').click(function (evt) {
   $popUpVideo.append(videoHtml);
   $videoOverlay.append($popUpVideo);
   $videoOverlay.show();
-
 });
 
 //hide overlay and video when clicked
@@ -138,6 +159,8 @@ $('.coverText').hide();
 
 $('.videos img').hover(function () {
   $(this).siblings('div').show();
+  $(this).addClass('blurred');
 }, function () {
   $('.coverText').hide();
+  $(this).removeClass('blurred');
 });

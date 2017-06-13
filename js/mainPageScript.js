@@ -30,6 +30,19 @@ $(sectionButton).click(function () {
 
 });
 
+//Close page divs if clicks are made outside of divs
+var tabClosers = ['footer', '.social-media', '#new-album-info', '#logo'];
+
+function closeAllPages(clicked) {
+  $(clicked).click(function() {
+    $(sectionButton).siblings('div').slideUp();
+  });
+}
+
+for (i=0;i<tabClosers.length;i++) {
+  closeAllPages(tabClosers[i]);
+}
+
 
 //Light-box for photos
 var $overlay = $('<div id="overlay"></div>');

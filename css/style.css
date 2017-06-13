@@ -26,12 +26,24 @@ p {
   margin: 1.5%;
 }
 
+header {
+  z-index: 10;
+}
+
 footer {
   text-align: center;
 }
 
 
 /********NAV**********/
+
+.main-nav-drop-down {
+  position:fixed;
+  width: 100%;
+  top: 50px;
+  margin: auto;
+  text-align: center;
+}
 
 .main-nav h2 {
   text-align: center;
@@ -43,6 +55,7 @@ footer {
 
 .main-nav h2:hover {
   background: rgba(14, 12, 29, 0.2);
+  filter: brightness(1.25);
   cursor: pointer;
 }
 
@@ -53,6 +66,7 @@ footer {
   border: none;
   font-size: 1.25em;
   letter-spacing: 1em;
+  text-indent: 1em;
   width: 100%;
   text-transform: uppercase;
 }
@@ -60,7 +74,7 @@ footer {
 .nav-button:hover,
 #navArrow:hover {
   cursor: pointer;
-  filter: brightness(130%);
+  filter: brightness(1.25);
 }
 
 header {
@@ -70,8 +84,8 @@ header {
 
 #navArrow {
   width: 20%;
-  margin: auto;
   padding: 3% 0;
+  margin: auto;
 }
 
 .arrowSelected {
@@ -79,6 +93,20 @@ header {
   transition: .8s;
 }
 
+.navOverlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.65); 
+}
+
+.spacer {
+  height: 50px;
+}
 
 /*********PHOTO Page***********/
 
@@ -97,6 +125,10 @@ header {
 
 .photoPage div img {
   width: 100%;
+}
+
+.photoPage div img:hover {
+  filter: brightness(1.25);
 }
 
 .photoPage h3 {
@@ -132,7 +164,7 @@ header {
   left: 0;
   display: none;
   text-align: center;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8); 
 }
 
 #photoOverlay img {
@@ -181,6 +213,10 @@ h3 {
   margin-bottom: -1%;
 }
 
+.blurred {
+  filter: blur(2px) brightness(1.25);
+}
+
 .coverText {
   pointer-events: none;
   position: absolute;
@@ -212,6 +248,7 @@ h3 {
   display: none;
   text-align: center;
   background: rgba(0, 0, 0, 0.8);
+  z-index: 11;
 }
 
 #popUpVideo {
@@ -242,7 +279,55 @@ h3 {
 }
 
 
+/*********BIO Page***********/
 
+.audio h2 {
+  padding: 0 0 1% 2%;
+}
+
+.audio p {
+  padding: 5%;
+}
+
+.audio ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  display: flex; 
+  flex-direction: column;
+  margin-bottom: 3%;
+}
+
+.audio li {
+  margin: auto;
+  padding: 2%;
+}
+
+.audio li:hover {
+  filter: brightness(1.25);
+}
+
+.audio li img {
+  position: relative;
+  top:15px;
+  width: 40px;
+  margin-right: 5px;
+  padding: 1%;
+}
+
+.audio ul a {
+  padding: 5%;
+}
+
+.music-content {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 5%;
+}
+
+.music-content iframe:hover {
+  filter: brightness(1.25);
+}
 
 /*********BIO Page***********/
 
@@ -319,3 +404,35 @@ h1 {
 .article:hover {
   filter: brightness(120%);
 }
+
+
+
+
+/***********media query for small mobile screens in portrait*************/
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 736px) and (orientation: portrait) {
+  
+  /**********Adjustments base font sizes***********/
+  
+  h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 2.5em;
+  }
+  p {
+    font-size: 1.75em;
+  }
+  
+  /**********Adjustments to nav***********/
+  
+  .nav-button {
+    font-size: 3em;
+  }
+  
+  .main-nav h2 {
+    border-bottom: 3px dotted #fbb040;
+  }
+  
+}
+

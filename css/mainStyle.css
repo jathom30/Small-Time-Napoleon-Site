@@ -177,6 +177,10 @@ footer {
   border: none;
 }
 
+#image-gallery img:hover {
+  filter: brightness(1.25);
+}
+
 .photo ul li {
   list-style: none;
   width: 50%;
@@ -416,6 +420,8 @@ footer {
     height: 200%;
   }
   #overlay img {
-    margin-top: 100%;
+    margin-top: 80%;
   }
+  
+  
 }
