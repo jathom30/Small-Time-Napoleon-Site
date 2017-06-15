@@ -54,9 +54,26 @@ footer {
 }
 
 .main-nav h2:hover {
-  background: rgba(14, 12, 29, 0.2);
+  background: rgba(0,0,0, 0.35);
   filter: brightness(1.25);
   cursor: pointer;
+}
+
+#buttonAndArrow {
+  margin: auto;
+  text-align: center;
+  min-height: 90px;
+}
+
+#navArrow {
+  width: 20%;
+  padding: 3% 0;
+}
+
+#buttonAndArrow:hover,
+.inDropDown:hover {
+  cursor: pointer;
+  filter: brightness(1.25);
 }
 
 .nav-button {
@@ -71,22 +88,11 @@ footer {
   text-transform: uppercase;
 }
 
-.nav-button:hover,
-#navArrow:hover {
-  cursor: pointer;
-  filter: brightness(1.25);
-}
-
 header {
   display: flex;
   flex-direction: column;
 }
 
-#navArrow {
-  width: 20%;
-  padding: 3% 0;
-  margin: auto;
-}
 
 .arrowSelected {
   transform:scaleY(-1);
@@ -404,8 +410,6 @@ h1 {
 .article:hover {
   filter: brightness(120%);
 }
-
-
 
 
 /***********media query for small mobile screens in portrait*************/

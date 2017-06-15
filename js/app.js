@@ -1,37 +1,40 @@
 const $navButton = $('.nav-button');
 const $nav = $('.main-nav');
-const $navArrow = $('#navArrow');
+const $navButtonAndArrow = $('#buttonAndArrow');
+const $navArrow = $('<img id="navArrow" src="img/downArrow.png">');
 
 //add overlay when nav is extended
 var $navOverlay = $('<div class="navOverlay"></div>');
 var $header = $('header');
 
 $('body').append($navOverlay);
-
+$navButtonAndArrow.append($navArrow);
 
 $nav.hide();
 //flip arrow as needed
-$navButton.click(function () {
+$navButtonAndArrow.click(function () {
+
   $nav.slideToggle();
   $navArrow.toggleClass('arrowSelected');
   $navOverlay.toggleClass('navSelected');
   if ($navOverlay.hasClass('navSelected')) {
     $navOverlay.show();
+    $navArrow.appendTo('.main-nav-drop-down').addClass('inDropDown');
   } else{
     $navOverlay.hide();
+    $navArrow.appendTo($navButtonAndArrow).removeClass('inDropDown');
   }
 });
 
-$navArrow.click(function () {
-  $nav.slideToggle();
-  $navArrow.toggleClass('arrowSelected');
-  $navOverlay.toggleClass('navSelected');
-  if ($navOverlay.hasClass('navSelected')) {
-    $navOverlay.show();
-  } else{
-    $navOverlay.hide();
+$navArrow.click(function() {
+  if ($navArrow.hasClass('inDropDown')) {
+    $nav.slideUp();
+    $navArrow.removeClass('arrowSelected');
+    $navOverlay.removeClass('navSelected').hide();
+    $navArrow.appendTo($navButtonAndArrow).removeClass('inDropDown');
   }
-});
+})
+
 
 $navOverlay.click(function() {
   $navOverlay.hide();
