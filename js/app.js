@@ -13,19 +13,21 @@ $navButtonAndArrow.append($navArrow);
 $nav.hide();
 //flip arrow as needed
 $navButtonAndArrow.click(function () {
-
   $nav.slideToggle();
   $navArrow.toggleClass('arrowSelected');
   $navOverlay.toggleClass('navSelected');
   if ($navOverlay.hasClass('navSelected')) {
     $navOverlay.show();
+    //move arrow to nav-drop-down
     $navArrow.appendTo('.main-nav-drop-down').addClass('inDropDown');
   } else{
     $navOverlay.hide();
+    //move arrow back to button div
     $navArrow.appendTo($navButtonAndArrow).removeClass('inDropDown');
   }
 });
 
+//if arrow is in nav-drop-down div, make it clickable
 $navArrow.click(function() {
   if ($navArrow.hasClass('inDropDown')) {
     $nav.slideUp();
@@ -34,7 +36,6 @@ $navArrow.click(function() {
     $navArrow.appendTo($navButtonAndArrow).removeClass('inDropDown');
   }
 })
-
 
 $navOverlay.click(function() {
   $navOverlay.hide();
@@ -167,3 +168,15 @@ $('.videos img').hover(function () {
   $('.coverText').hide();
   $(this).removeClass('blurred');
 });
+
+//creating hover effect if on a device with touch
+if (window.Touch) {
+  $('.videos img').bind('touchstart', function() {
+    $(this).siblings('div').show();
+    $(this).addClass('blurred');
+  }).on('touchend', function() {
+    $('.coverText').hide();
+    $(this).removeClass('blurred');
+  });
+}
+

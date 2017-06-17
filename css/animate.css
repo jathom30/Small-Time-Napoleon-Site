@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  color: #fbb141;
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: rgb(36, 39, 111);
+}
+
+.bandPhotoMainPage {
+  width: 100%;
+  margin-bottom: 10%;
+  border-top: 1px solid #fbb141;
+  border-bottom: 1px solid #fbb141;
+}
+
+/*******basic div setup********/
+
+.all-images {
+
+}
+
+img {
+  width: 100%;
+}
+
+.logo {
+  margin: auto;
+  padding-top: 5%;
+  margin-bottom: 10%;
+}
+
+.blue-background,
+.background-image,
+.sun,
+.spot-light-1,
+.main-building,
+.spot-light-2,
+.blimp,
+.foreground-buildings {
+  bottom: 0;
+  pointer-events: none;
+  position: fixed;
+  z-index: -1;
+}
+
+.logo {
+  width: 85%;
+  left: 7.5%;
+  top: 2.5%;
+}
+
+footer {
+  opacity: .25;
+  position: fixed;
+  z-index: -1;
+  width: 60%;
+  bottom: 0;
+  left: 20%;
+  text-align: center;
+  padding: 1%;
+}
+
+/*******div animations********/
+
+.spot-light-1 {
+  transform: rotate(-15deg) scale(1.5);
+  transition: transform 4s ease-in-out;
+  transform-origin: bottom left;
+}
+
+.backgroundAnimation.loaded .spot-light-1 {
+  transform: rotate(5deg);
+}
+
+.spot-light-2 {
+  transform: rotate(2deg) scale(1.2);
+  transform-origin: bottom right;
+  transition: transform 3900ms cubic-bezier(0.2, -0.1, 0.71, 1.1) 300ms;
+}
+
+.backgroundAnimation.loaded .spot-light-2 {
+  transform: rotate(-2deg);
+}
+
+.blimp {
+  transition: transform 3900ms cubic-bezier(0.57, -1.01, 0.38, 2.05) 100ms;
+}
+
+.backgroundAnimation.loaded .blimp {
+  transform: translate(0px, 30px);
+}
+
+.sun {
+  transform: scale(.75);
+  transition: transform 4s ease-in-out;
+}
+
+.backgroundAnimation.loaded .sun {
+  transform: scale(1);
+}
+
+.background-image {
+  transform: translate(0px, -2px);
+  transition: transform 4s ease-in-out;
+}
+
+.backgroundAnimation.loaded .background-image {
+  transform: translate(0px, 40px);
+}
+
+.main-building {
+  transition: transform 4s ease-in-out;
+}
+
+.backgroundAnimation.loaded .main-building {
+  transform: translate(0px, 20px);
+}

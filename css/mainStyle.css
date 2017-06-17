@@ -25,25 +25,9 @@ p {
   margin: 1.5%;
 }
 
-footer {
-  text-align: center;
-}
-
-.name-logo {
-  width: 100%;
-  position: fixed;
-  padding: 25px 20px;
-  margin: auto;
-  z-index: -1;
-}
 
 .logo {
   width: 100%;
-}
-
-.test img {
-  max-height: 50%;
-  max-width: 100%;
 }
 
 
@@ -62,9 +46,9 @@ footer {
 }
 
 .section h2 {
-  margin: 1%;
+  margin: 0;
   cursor: pointer;
-  padding: 1.5%;
+  padding: 3.5%;
 }
 
 .section h2:hover {
@@ -93,7 +77,8 @@ footer {
 
 .section {
   border-bottom: 1px dotted #fbb040;
-  margin: 0 1.25%;
+  background: rgba(14, 12, 29, 0.2);
+  margin: 0;
 }
 
 .section img {
@@ -103,7 +88,7 @@ footer {
 }
 
 .section div {
-  margin: 0 1.25%;
+  margin: 1% 0;
 }
 
 #logo {
@@ -130,7 +115,7 @@ footer {
 
 .social-media {
   padding: 1%;
-  margin-bottom: 2%;
+  margin-bottom: 12%;
 }
 
 .social-media ul {
@@ -401,6 +386,7 @@ footer {
   .photo p {
     font-size: 1.75em;
   }
+
   #new-album-info h1 {
     font-size: 4em;
     padding: 1%;

@@ -2,17 +2,25 @@
 $('.section').children('div').hide();
 
 
-//hide name logo on scroll down, reveal name on scroll up
-var $nameLogo = $('.name-logo');
-$nameLogo.height()
-$(window).scroll(function () {
-  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  if (scrollTop > 200) {
-    $nameLogo.css('opacity', 0);
-  } else {
-    $nameLogo.css('opacity', 1 - scrollTop / 200);
-  }
-}).scroll();
+//once page loads, activate background animation
+$(document).ready(function() {
+  setTimeout(function() {
+    $('.backgroundAnimation').addClass('loaded');
+  }, 500); //wait 500ms to start animation
+});
+
+
+////hide name logo on scroll down, reveal name on scroll up
+//var $nameLogo = $('.logo');
+//$nameLogo.height()
+//$(window).scroll(function () {
+//  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+//  if (scrollTop > 200) {
+//    $nameLogo.css('opacity', 0);
+//  } else {
+//    $nameLogo.css('opacity', 1 - scrollTop / 200);
+//  }
+//}).scroll();
 
 //open selected div and close all others
 var sectionButton = document.querySelectorAll('.section h2');
