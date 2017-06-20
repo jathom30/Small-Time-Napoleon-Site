@@ -13,30 +13,8 @@ body {
   background: rgb(36, 39, 111);
 }
 
-.bandPhotoMainPage {
-  width: 100%;
-  margin-bottom: 10%;
-  border-top: 1px solid #fbb141;
-  border-bottom: 1px solid #fbb141;
-}
-
 /*******basic div setup********/
 
-.all-images {
-
-}
-
-img {
-  width: 100%;
-}
-
-.logo {
-  margin: auto;
-  padding-top: 5%;
-  margin-bottom: 10%;
-}
-
-.blue-background,
 .background-image,
 .sun,
 .spot-light-1,
@@ -48,12 +26,6 @@ img {
   pointer-events: none;
   position: fixed;
   z-index: -1;
-}
-
-.logo {
-  width: 85%;
-  left: 7.5%;
-  top: 2.5%;
 }
 
 footer {
@@ -79,6 +51,10 @@ footer {
   transform: rotate(5deg);
 }
 
+.backgroundAnimation.clicked .spot-light-1 {
+  transform: rotate(-2deg);
+}
+
 .spot-light-2 {
   transform: rotate(2deg) scale(1.2);
   transform-origin: bottom right;
@@ -89,12 +65,21 @@ footer {
   transform: rotate(-2deg);
 }
 
-.blimp {
-  transition: transform 3900ms cubic-bezier(0.57, -1.01, 0.38, 2.05) 100ms;
+.backgroundAnimation.clicked .spot-light-2 {
+  transform: rotate(12deg);
 }
 
-.backgroundAnimation.loaded .blimp {
-  transform: translate(0px, 30px);
+.blimp {
+  animation: blimpBounce 4s ease-in-out 0s infinite alternate forwards running;
+}
+
+@keyframes blimpBounce {
+  from {
+    transform: translate(0px,10px);
+  }
+  to {
+    transform: translate(0,0);
+  }
 }
 
 .sun {

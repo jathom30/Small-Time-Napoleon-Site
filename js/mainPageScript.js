@@ -30,6 +30,7 @@ $(sectionButton).click(function () {
   var $clicked = $(this).get(0);
   var opened = $clicked.nextSibling.nextSibling;
   $(opened).slideToggle();
+  $('.backgroundAnimation').toggleClass('clicked');
 
   //get parent of opened div and closes siblings children's divs
   var parent = opened.parentElement;
@@ -39,7 +40,7 @@ $(sectionButton).click(function () {
 });
 
 //Close page divs if clicks are made outside of divs
-var tabClosers = ['footer', '.social-media', '#new-album-info', '#logo'];
+var tabClosers = ['footer', '.social-media', '#new-album-info', '.bandPhotoMainPage', '.backgroundAnimation'];
 
 function closeAllPages(clicked) {
   $(clicked).click(function() {

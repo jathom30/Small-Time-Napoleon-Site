@@ -106,16 +106,21 @@ $overlay.click(function () {
 
 
 
-//////Video Page//////
+//////Video Page///////
 //hide extra videos
 $('.moreCoverVideos').hide();
 $('.moreWitzkeVideos').hide();
 $('.moreLivingRoomVideos').hide();
 
+
+
 //slideToggle extra video divs
 $('.videoMoreButton').click(function () {
   $(this).prev().slideToggle();
+  //toggle bottom border of video divs off an on depending on their state
+  $(this).parent().children('div').first().toggleClass('addBorderBottom');
 
+  //change 'show more' vid button depending on state
   if ($(this).text() === 'show more') {
     $(this).text('show less');
   } else {
@@ -123,7 +128,7 @@ $('.videoMoreButton').click(function () {
   }
 });
 
-
+//add video overlay when image is clicked
 var $videoOverlay = $('<div id="videoOverlay"></div>');
 var $popUpVideo = $('<div id="popUpVideo"></div>');
 var videoHtml = '<iframe width="560" height="315" src="';

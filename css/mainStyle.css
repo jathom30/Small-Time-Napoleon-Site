@@ -12,7 +12,7 @@ a {
 }
 
 body {
-  background: linear-gradient(rgb(39, 35, 85), rgb(40, 56, 145)10%, rgb(39, 35, 85));
+  background: linear-gradient(rgb(39, 35, 85), rgb(40, 56, 145), rgb(39, 35, 85));
   display: flex;
   flex-direction: column;
 }
@@ -25,24 +25,27 @@ p {
   margin: 1.5%;
 }
 
-
-.logo {
+img {
   width: 100%;
 }
-
 
 /********TO PAGE LINKS**********/
 
 .to-more-pages {
+  background: linear-gradient(to left, rgba(0,0,0,.25), rgba(0,0,0,0));
   text-transform: uppercase;
   font-size: .7em;
   display: block;
   text-align: right;
+}
+
+.to-more-pages a {
+  display: block;
   padding: 2%;
 }
 
 .to-more-pages a:hover {
-  color: #ffca7b;
+  filter: brightness(1.25);
 }
 
 .section h2 {
@@ -58,20 +61,23 @@ p {
 
 /********HOME(LOGO)*********/
 
-#new-album-info {
-  background: linear-gradient(to bottom, rgba(14, 12, 29, 0), rgba(14, 12, 29, 0.2)15%, rgba(14, 12, 29, 0.2)85%, rgba(14, 12, 29, 0));
-  padding: 1%;
+.logo {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  margin-top: 3%;
+  padding: 5%;
 }
 
-#new-album-info h1 {
-  font-size: 2em;
-  padding: 1%;
+.bandPhotoMainPage {
+  width: 100%;
+  margin-bottom: 10%;
 }
 
-#new-album-info p {
-  margin-top: 4%;
+.bandPhotoMainPage img {
+  border-top: 1px solid #fbb141;
+  border-bottom: 1px solid #fbb141;
 }
-
 
 /********SECTION IMAGES**********/
 
@@ -83,7 +89,8 @@ p {
 
 .section img {
   max-width: 100%;
-  border: 1px solid #fbb040;
+  border-top: 1px solid #fbb040;
+  border-bottom: 1px solid #fbb040;
   box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.25);
 }
 
@@ -218,9 +225,14 @@ p {
 
 /********AUDIO**********/
 
-.music-player {
+#music-player {
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+
+#music-player iframe {
+  margin: auto;
 }
 
 
@@ -228,6 +240,7 @@ p {
 
 .bio-page p {
   padding: 0 15px;
+  text-align: left;
 }
 
 .member-list {
@@ -257,6 +270,11 @@ p {
 .press-content {
   display: flex;
   flex-flow: column wrap;
+  padding: 0;
+}
+
+.press-content ul {
+  padding: 0;
 }
 
 .press-content li {
@@ -270,7 +288,8 @@ p {
 #article {
   border: 1px solid #fbb040;
   padding: 2%;
-  margin-bottom: 5%;
+  margin: 5%;
+  background: rgba(0,0,0,.35);
 }
 
 #article:hover {
@@ -313,7 +332,8 @@ p {
 .contact-inqueries textarea {
   width: 100%;
   justify-content: center;
-  color: rgb(42, 35, 80);
+  color: #2a2350;
+  font-size: 1.25em;
 }
 
 .booking-inqueries textarea,
@@ -332,6 +352,11 @@ p {
   margin: auto;
   margin-bottom: 5%;
   cursor: pointer;
+}
+
+.contact-form button:hover {
+  box-shadow: 0 0 10px 5px rgba(0,0,0,.25);
+  color: #fff;
 }
 
 
@@ -410,4 +435,212 @@ p {
   }
   
   
+  /**********Adjustments to Videos on Index***********/
+  #video-players video {
+    width: 80%;
+  }
+  
+  
+  /**********Adjustments to Audio on Index***********/
+  #music-player iframe {
+    margin: auto;
+  }
+  
+  
+  /**********Adjustments to Contact on Index***********/
+  .contact-form button {
+    font-size: 2em;
+  }
+  
 }
+
+@media only screen and (min-width: 550px) {
+  
+  /***LOGO AND BAND PIC***/
+  .logo img {
+    width: 70%;
+  }
+  
+  .bandPhotoMainPage {
+    border: none;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  
+  .bandPhotoMainPage img {
+    width: 80%;
+    margin: auto;
+    border-bottom: 1px solid #fbb141;
+    border-top: 1px solid #fbb141;
+  }
+  
+  
+  /***SOCIAL MEDIA***/
+  .social-media {
+    margin: 3% 0;
+  }
+  .social-media ul {
+    width: 50%;
+  }
+  
+  
+  /***SECTION HEADERS***/
+  .section {
+    width: 80%;
+    margin: auto;
+  }
+  
+  .section h2{
+    padding: 2%;
+  }
+  
+  
+  /***PHOTO SECTION***/
+  #image-gallery ul {
+    width: 75%
+  }
+  
+  #overlay img {
+    margin-top: 40%;
+  }
+  
+  
+  /***VIDEO SECTION***/
+  #video-players video {
+    width: 80%;
+  }
+  
+  
+  /***AUDIO SECTION***/
+  
+  
+  
+  /***BIO SECTION***/
+  .bio-content {
+    text-align: center;
+  }
+  
+  .bio-content p {
+    text-align: left;
+  }
+  
+  .bio-content img {
+    width: 80%;
+  }
+  
+  .bio-content a {
+    text-align: right;
+  }
+  
+  /***BOOKING SECTION***/
+  .contact-form {
+    margin: auto;
+    width: 80%;
+  }
+  
+}
+
+
+@media only screen and (min-width: 850px) {
+  
+  /***LOGO AND BAND PIC***/
+  .logo {
+    margin-top: 0;
+    padding: 2%;
+  }
+  
+  .logo img {
+    width: 45%;
+  }
+  
+  
+  .bandPhotoMainPage img {
+    width: 60%;
+    margin: auto;
+    border-bottom: 1px solid #fbb141;
+    border-top: 1px solid #fbb141;
+  }
+  
+  .pageSelectors {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  .sectionListElements {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+  }
+
+  .section {
+    border: none;
+    background: none;
+  }
+  
+  .section h2 {
+    text-align: center;
+    padding: 5%;
+    font-size: 1.25em;
+  }
+  
+  #image-gallery,
+  #video-players,
+  #music-player,
+  .bio-content,
+  .press-content,
+  .calendar-content,
+  .contact-hide {
+    position: fixed;
+    left: 10%;
+    top: 25%;
+    width: 80%;
+    background: linear-gradient(rgba(39, 35, 85,1), rgba(40, 56, 145,.9), rgba(39, 35, 85,.8));
+    border-top: 1px solid #fbb141;
+    border-bottom: 1px solid #fbb141; 
+  }
+  
+  .bandPhotoMainPage {
+    order: 1;
+    flex-grow: 2;
+    margin-top: 5%;
+  }
+  
+  .social-media {
+    order: 2;
+    margin-bottom: 5%;
+  }
+  
+  .social-media ul {
+    width: 25%;
+  }
+  
+  /***PHOTO SECTION***/
+  #image-gallery ul {
+    width: 75%
+  }
+  
+  #overlay img {
+    margin-top: 20%;
+  }
+  
+  /***VIDEO tab***/
+  #video-players video {
+    padding: 2%;
+  }
+  
+  #video-players p {
+    margin: auto;
+    width: 80%;
+  }
+  
+  #video-players a {
+    margin-bottom: 2%;
+  }
+  
+}
+

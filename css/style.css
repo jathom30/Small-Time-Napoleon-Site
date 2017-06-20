@@ -12,8 +12,7 @@ a {
 }
 
 body {
-  background: rgb(42, 35, 80);
-  background: linear-gradient(rgb(39, 35, 85), rgb(40, 56, 145)10%, rgb(39, 35, 85));
+  background: linear-gradient(rgb(39, 35, 85), rgb(40, 56, 145), rgb(39, 35, 85));
   display: flex;
   flex-direction: column;
 }
@@ -97,6 +96,10 @@ inDropDown-touch-start {
   text-transform: uppercase;
 }
 
+nav-button:hover {
+  cursor: pointer;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -123,6 +126,38 @@ header {
   height: 50px;
 }
 
+
+/*********Social Media Icons*********/
+
+.social-media {
+  padding: 1%;
+  margin: 12% 0;
+}
+
+.social-media ul {
+  display: flex;
+  padding: 0px;
+  align-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+
+.social-media ul li {
+  list-style: none;
+  padding: 0 1%;
+  text-align: center;
+}
+
+.social-media img {
+  border-radius: 22%;
+  width: 75%;
+}
+
+.social-media img:hover {
+  filter: brightness(120%);
+}
+
+
 /*********PHOTO Page***********/
 
 .photoPage div {
@@ -142,7 +177,7 @@ header {
   width: 100%;
 }
 
-.photoPage div img:hover
+.photoPage div img:hover,
 .photoPage-div-img-touch-start {
   filter: brightness(1.25);
 }
@@ -164,6 +199,7 @@ header {
   width: 50%;
   margin: auto;
   margin-top: 2%;
+  margin-bottom: 5%;
   border-radius: 3px;
 }
 
@@ -209,12 +245,26 @@ h3 {
   flex-direction: column;
 }
 
-#highlightedVideos,
 #coverVideos,
 #witzkeVideos,
 #mtsuVideos,
 #livingRoomVideos {
     border-top: 1px solid #fbb040;
+}
+
+.addBorderBottom {
+  border-bottom: 1px solid #fbb040;
+}
+
+#mtsuVideos {
+  margin-bottom: 8%;
+  border-bottom: 1px solid #fbb040;
+}
+
+.moreCoverVideos, 
+.moreWitzkeVideos,
+.moreLivingRoomVideos {
+  border-bottom: 1px solid #fbb040;
 }
 
 .videos img {
@@ -288,6 +338,7 @@ h3 {
   width: 50%;
   margin: auto;
   margin-top: 2%;
+  margin-bottom: 3%;
   border-radius: 3px;
 }
 
@@ -298,7 +349,7 @@ h3 {
 }
 
 
-/*********BIO Page***********/
+/*********AUDIO Page***********/
 
 .audio h2 {
   padding: 0 0 1% 2%;
@@ -361,8 +412,13 @@ h1 {
   padding: 2%;
 }
 
+.bioPageContent {
+  background: rgba(0,0,0,.35);
+}
+
 .bio-page p {
-  padding: 2% 3%;
+  padding: 3%;
+  margin: 0;
 }
 
 .member-list {
@@ -386,6 +442,7 @@ h1 {
 .bio-page img {
   width: 100%;
   border-top: 1px solid #fbb040;
+  border-bottom: 1px solid #fbb040;
 }
 
 
@@ -422,7 +479,7 @@ h1 {
 .article,
 .performance {
   border: 1px solid #fbb040;
-  background: rgba(0,0,0,.2);
+  background: rgba(0,0,0,.25);
   padding: 2%;
   margin-bottom: 5%;
 }
@@ -431,6 +488,62 @@ h1 {
   filter: brightness(120%);
 }
 
+
+/*********BOOKING/CONTACT Page***********/
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-inqueries {
+  display: flex;
+  margin-bottom: 5%;
+  border: none;
+  border-top: 1px solid #fbb040;
+  border-bottom: 1px solid #fbb040;
+  background: rgba(0,0,0,.25);
+}
+
+.booking-inqueries legend {
+  font-size: 1.25em;
+}
+
+.booking-inqueries label {
+  padding: 1.25%;
+}
+
+.booking-inqueries input {
+  width: 100%;
+  padding: 1.5%;
+  margin-bottom: 2%;
+  font-size: 1.25em;
+  color: #2a2350;
+}
+
+.booking-inqueries textarea {
+  width: 100%;
+  height: 80px;
+  color: #2a2350;
+  font-size: 1.25em;
+}
+
+.contact-form button {
+  background: #fbb040;
+  color: #2a2350;
+  border-width: 0px;
+  padding: 2%;
+  font-size: 1em;
+  border-radius: 3px;
+  width: 75%;
+  margin: auto;
+  margin-bottom: 5%;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  box-shadow: 0 0 10px 5px rgba(0,0,0,.25);
+  color: #fff;
+}
 
 /***********media query for small mobile screens in portrait*************/
 
