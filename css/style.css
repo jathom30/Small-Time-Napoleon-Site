@@ -451,7 +451,7 @@ h1 {
 .pressContent,
 .performanceContent {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
   padding: 5%;
 
 }

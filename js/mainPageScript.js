@@ -10,21 +10,16 @@ $(document).ready(function() {
 });
 
 
-////hide name logo on scroll down, reveal name on scroll up
-//var $nameLogo = $('.logo');
-//$nameLogo.height()
-//$(window).scroll(function () {
-//  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//  if (scrollTop > 200) {
-//    $nameLogo.css('opacity', 0);
-//  } else {
-//    $nameLogo.css('opacity', 1 - scrollTop / 200);
-//  }
-//}).scroll();
+
 
 //open selected div and close all others
 var sectionButton = document.querySelectorAll('.section h2');
 $(sectionButton).click(function () {
+
+  //disable CTA if screen is wider than 800px
+  if ($(window).width() >= 800) {
+    $('.bandPhotoMainPage').toggleClass('disableClickMain');
+  }
 
   //get this clicked header and open its next sibling
   var $clicked = $(this).get(0);
@@ -39,8 +34,9 @@ $(sectionButton).click(function () {
 
 });
 
+
 //Close page divs if clicks are made outside of divs
-var tabClosers = ['footer', '.social-media', '#new-album-info', '.bandPhotoMainPage', '.backgroundAnimation'];
+var tabClosers = ['footer', '.social-media', '.logo', '.backgroundAnimation'];
 
 function closeAllPages(clicked) {
   $(clicked).click(function() {
@@ -51,6 +47,12 @@ function closeAllPages(clicked) {
 for (i=0;i<tabClosers.length;i++) {
   closeAllPages(tabClosers[i]);
 }
+
+
+//add link to call to action when clicked
+$('.bandPhotoMainPage').click(function() {
+  window.location = 'http://smalltimenapoleon.bandcamp.com';
+})
 
 
 //Light-box for photos
@@ -118,3 +120,7 @@ $cancelPopUp.click(function () {
 $('#article').click(function() {
   $(this).children('a');
 })
+
+
+
+
