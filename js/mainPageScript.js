@@ -18,7 +18,7 @@ $(sectionButton).click(function () {
 
   //disable CTA if screen is wider than 800px
   if ($(window).width() >= 800) {
-    $('.bandPhotoMainPage').toggleClass('disableClickMain');
+    $('.mainPageCallToAction').toggleClass('disableClickMain');
   }
 
   //get this clicked header and open its next sibling
@@ -47,12 +47,6 @@ function closeAllPages(clicked) {
 for (i=0;i<tabClosers.length;i++) {
   closeAllPages(tabClosers[i]);
 }
-
-
-//add link to call to action when clicked
-$('.bandPhotoMainPage').click(function() {
-  window.location = 'http://smalltimenapoleon.bandcamp.com';
-})
 
 
 //Light-box for photos

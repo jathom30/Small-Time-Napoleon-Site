@@ -319,13 +319,29 @@ h3 {
   z-index: 11;
 }
 
-#popUpVideo {
-  position: fixed;
-  top: 40%;
-  left: 5%;
-  right: 5%;
-  z-index: 10;
+.videoSize {
+  position: absolute;
+  width: 95%;
+  left: 2.5%;
+  top: 150px;
 }
+
+.flexVideo {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56%;
+  position: relative;
+}
+
+.flexVideo iframe {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+}
+
+
 
 #popUpVideo iframe {
   width: 100%;
@@ -396,10 +412,25 @@ audio-li-touch-start {
   padding: 5% 15%;
 }
 
-.music-content {
+.musicIFrames {
   width: 90%;
   margin: auto;
-  margin-bottom: 5%;
+}
+
+.music-content {
+  margin: 4px;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 32%;
+  position: relative;
+}
+
+.music-content iframe {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
 }
 
 .music-content iframe:hover {
@@ -456,8 +487,12 @@ h1 {
 
 }
 
-.pressAndPerformance img {
-  width: 100%;
+#pressPhoto {
+  background-image: url(/photoPageImg/Meredith%20Chase-Wedding%20Photos-0264.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 300px;
   border-bottom: 1px solid #fbb040;
   border-top: 1px solid #fbb040;
 }
@@ -572,4 +607,163 @@ h1 {
   }
   
 }
+
+@media only screen and (min-width: 450px) {
+  /***NAV***/
+  .main-nav {
+    margin: auto;
+    width: 75%;
+  }
+
+  #navArrow {
+    width: 10%;
+  }
+
+  /***SOCIAL MEDIA ICONS***/
+  .social-media ul {
+    width: 50%;
+  }
+
+  /***basic page resize***/
+  .videos,
+  .photoPage,
+  .audio,
+  .bio-page,
+  .pressAndPerformance,
+  .booking-info {
+    width: 75%;
+    margin: auto;
+  }
+
+  /***VIDEO page***/
+  .coverText {
+    width: 75%;
+    left: 12.5%;
+  }
+
+}
+
+@media only screen and (min-width: 800px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  #buttonAndArrow {
+    margin: 0;
+    padding-top: 10px;
+  }
+
+  .main-nav-drop-down {
+    position: relative;
+    margin-top: -30px;
+  }
+
+  .main-nav {
+    flex-basis: auto;
+    margin: 0;
+    align-items: center;
+    align-content: space-around;
+    width: 75%;
+    margin: auto;
+  }
+
+  .main-nav h2 {
+    border: none;
+    font-size: 1em;
+  }
+
+  /***SOCIAL MEDIA ICONS***/
+  .social-media {
+    margin: 40px;
+  }
+  .social-media ul {
+    width: 25%;
+  }
+
+
+  /***COLUMN setup***/
+  .photoPage,
+  .videos,
+  .pressAndPerformance {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 90%;
+    align-content: center;
+    align-items: flex-start;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-self: flex-start;
+  }
+
+  .column h3 {
+    width: 100%;
+    text-align: center;
+  }
+
+  /***PHOTO page***/
+  .photoPage img {
+    margin-bottom: -5px;
+  }
+
+  #photoOverlay img {
+    max-height: 75%;
+    width: auto;
+    margin-top: 150px;
+  }
+
+  /***VIDEO page***/
+  #popUpVideo {
+    width: 75%;
+    left: 12.5%;
+  }
+
+  .videoSize {
+  width: 70%;
+  left: 15%;
+  }
+
+
+  /***AUDIO page***/
+  .music-content {
+    padding-bottom: 23%;
+  }
+
+
+  .audioFlex {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    margin-top: 30px;
+  }
+
+  .streaming,
+  .purchasing {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+  }
+
+  /***PRESS page***/
+
+  #pressPhoto {
+    margin-top: 55px;
+    height: 500px;
+  }
+
+  /***BOOKING page***/
+  .contact-form {
+    width: 60%;
+    margin: auto;
+  }
+
+
+}
+
 

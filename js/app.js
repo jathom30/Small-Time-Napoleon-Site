@@ -8,9 +8,35 @@ var $navOverlay = $('<div class="navOverlay"></div>');
 var $header = $('header');
 
 $('body').append($navOverlay);
-$navButtonAndArrow.append($navArrow);
+//$navButtonAndArrow.append($navArrow);
 
-$nav.hide();
+
+//hide or show nav depending on window size
+$(document).ready(function () {
+
+  function checkWidth() {
+
+    var windowWidth = $(window).width();
+
+    if (windowWidth <= 799) {
+      $('.main-nav').css('display', 'block');
+      $nav.hide();
+      $navButtonAndArrow.append($navArrow);
+    } else {
+      $nav.show();
+      $navArrow.remove();
+      $('.main-nav').css('display', 'flex');
+    }
+
+  }
+
+  checkWidth();
+
+  $(window).resize(checkWidth);
+
+});
+
+
 //flip arrow as needed
 $navButtonAndArrow.click(function () {
   $nav.slideToggle();
@@ -20,7 +46,7 @@ $navButtonAndArrow.click(function () {
     $navOverlay.show();
     //move arrow to nav-drop-down
     $navArrow.appendTo('.main-nav-drop-down').addClass('inDropDown');
-  } else{
+  } else {
     $navOverlay.hide();
     //move arrow back to button div
     $navArrow.appendTo($navButtonAndArrow).removeClass('inDropDown');
@@ -28,7 +54,7 @@ $navButtonAndArrow.click(function () {
 });
 
 //if arrow is in nav-drop-down div, make it clickable
-$navArrow.click(function() {
+$navArrow.click(function () {
   if ($navArrow.hasClass('inDropDown')) {
     $nav.slideUp();
     $navArrow.removeClass('arrowSelected');
@@ -37,7 +63,7 @@ $navArrow.click(function() {
   }
 })
 
-$navOverlay.click(function() {
+$navOverlay.click(function () {
   $navOverlay.hide();
   $nav.slideUp();
   $navArrow.removeClass('arrowSelected');
@@ -130,7 +156,8 @@ $('.videoMoreButton').click(function () {
 
 //add video overlay when image is clicked
 var $videoOverlay = $('<div id="videoOverlay"></div>');
-var $popUpVideo = $('<div id="popUpVideo"></div>');
+var $videoSize = $('<div class="videoSize"></div>');
+var $popUpVideo = $('<div class="flexVideo"></div>');
 var videoHtml = '<iframe width="560" height="315" src="';
 
 $('body').append($videoOverlay);
@@ -152,7 +179,8 @@ $('.videos img').click(function (evt) {
   videoHtml += '</iframe>';
 
   $popUpVideo.append(videoHtml);
-  $videoOverlay.append($popUpVideo);
+  $videoSize.append($popUpVideo);
+  $videoOverlay.append($videoSize);
   $videoOverlay.show();
 });
 
@@ -176,12 +204,11 @@ $('.videos img').hover(function () {
 
 //creating hover effect if on a device with touch
 if (window.Touch) {
-  $('.videos img').bind('touchstart', function() {
+  $('.videos img').bind('touchstart', function () {
     $(this).siblings('div').show();
     $(this).addClass('blurred');
-  }).on('touchend', function() {
+  }).on('touchend', function () {
     $('.coverText').hide();
     $(this).removeClass('blurred');
   });
 }
-

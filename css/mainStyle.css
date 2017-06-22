@@ -70,7 +70,7 @@ img {
   padding: 5%;
 }
 
-.bandPhotoMainPage {
+.mainPageCallToAction {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -81,24 +81,24 @@ img {
   overflow: hidden;
 }
 
-.bandPhotoMainPage:hover {
+.mainPageCallToAction a:hover {
   cursor: pointer;
   filter: brightness(1.1);
-  box-shadow: 0px 10px 2px rgba(0,0,0,.15);
+  text-shadow: 0px 3px 2px rgba(0,0,0,.15);
 }
 
-.bandPhotoMainPage div {
+.mainPageCallToAction div {
   width: 50%;
   padding: 5%;
 }
 
-.bandPhotoMainPage h3 {
+.mainPageCallToAction h3 {
   text-align: center;
   text-transform: uppercase;
   font-weight: 100;
 }
 
-.bandPhotoMainPage img {
+.mainPageCallToAction img {
   align-self: center;
   box-shadow: 5px 10px 2px -2px rgba(0,0,0,.5);
   transform: rotate(3deg);
@@ -254,14 +254,25 @@ img {
 
 /********AUDIO**********/
 
-#music-player {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+
+#music-main-width {
+  width: 90%;
+  margin: auto;
 }
 
-#music-player iframe {
-  margin: auto;
+.main-music-iframe {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 32%;
+  position: relative;
+}
+
+.main-music-iframe iframe {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
 }
 
 
@@ -570,7 +581,7 @@ img {
     padding: 3%;
   }
 
-  .bandPhotoMainPage {
+  .mainPageCallToAction {
     width: 75%;
     margin: auto;
     margin-bottom: 10%;
@@ -664,7 +675,7 @@ img {
     border-bottom: 1px solid #fbb141; 
   }
   
-  .bandPhotoMainPage {
+  .mainPageCallToAction {
     background: linear-gradient(rgba(255, 255, 255,0),rgba(255, 255, 255,.25),rgba(255, 255, 255, 0));
     width: 60%;
     margin: auto;
@@ -672,11 +683,11 @@ img {
     flex-grow: 2;
   }
 
-  .bandPhotoMainPage:hover {
+  .mainPageCallToAction:hover {
     box-shadow: none;
   }
 
-  .bandPhotoMainPage h3 {
+  .mainPageCallToAction h3 {
     font-size: 1.5em;
   }
   
@@ -719,14 +730,16 @@ img {
   /***AUDIO tab***/
   #music-player iframe {
     margin-top: 5%;
+    width: 100%;
   }
 
 
   /***BIO tab***/
   .bio-content div {
     font-size: 1.1em;
-    padding: 0 5%;
+    padding: 1% 5%;
   }
+
 
 
   /***CALENDAR tab***/
@@ -864,7 +877,7 @@ img {
   .press-content,
   .calendar-content,
   .contact-hide {
-    top: 260px;
+    top: 250px;
     width: 45%;
     left: 27.5%;
   }
