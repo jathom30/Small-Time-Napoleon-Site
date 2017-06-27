@@ -1,9 +1,10 @@
 /******Main******/
 
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: #fbb040;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Josefin Sans', 'sans-serif';
   margin: 0;
 }
 
@@ -12,8 +13,14 @@ a {
 }
 
 body {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(39, 35, 85)), color-stop(rgb(40, 56, 145)), to(rgb(39, 35, 85)));
   background: linear-gradient(rgb(39, 35, 85), rgb(40, 56, 145), rgb(39, 35, 85));
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -37,7 +44,7 @@ footer {
 /********NAV**********/
 
 .main-nav-drop-down {
-  position:fixed;
+  position: fixed;
   width: 100%;
   top: 8%;
   margin: auto;
@@ -59,7 +66,8 @@ footer {
 
 .main-nav h2:hover,
 .main-nav-touch-start {
-  background: rgba(0,0,0, 0.35);
+  background: rgba(0, 0, 0, 0.35);
+  -webkit-filter: brightness(1.25);
   filter: brightness(1.25);
   cursor: pointer;
 }
@@ -81,6 +89,7 @@ footer {
 .buttonAndArrow-touch-start,
 inDropDown-touch-start {
   cursor: pointer;
+  -webkit-filter: brightness(1.25);
   filter: brightness(1.25);
 }
 
@@ -101,13 +110,19 @@ nav-button:hover {
 }
 
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
-
 .arrowSelected {
-  transform:scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+  -webkit-transition: .8s;
   transition: .8s;
 }
 
@@ -119,7 +134,7 @@ header {
   left: 0;
   display: none;
   text-align: center;
-  background: rgba(0, 0, 0, 0.65); 
+  background: rgba(0, 0, 0, 0.65);
 }
 
 .spacer {
@@ -135,8 +150,11 @@ header {
 }
 
 .social-media ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 0px;
+  -ms-flex-line-pack: justify;
   align-content: space-between;
   width: 80%;
   margin: auto;
@@ -154,6 +172,7 @@ header {
 }
 
 .social-media img:hover {
+  -webkit-filter: brightness(120%);
   filter: brightness(120%);
 }
 
@@ -161,8 +180,15 @@ header {
 /*********PHOTO Page***********/
 
 .photoPage div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin: auto;
   padding: 0;
@@ -179,6 +205,7 @@ header {
 
 .photoPage div img:hover,
 .photoPage-div-img-touch-start {
+  -webkit-filter: brightness(1.25);
   filter: brightness(1.25);
 }
 
@@ -217,7 +244,7 @@ header {
   left: 0;
   display: none;
   text-align: center;
-  background: rgba(0, 0, 0, 0.8); 
+  background: rgba(0, 0, 0, 0.8);
 }
 
 #photoOverlay img {
@@ -234,6 +261,7 @@ header {
   text-align: center;
 }
 
+
 /*********VIDEO Page***********/
 
 h3 {
@@ -241,7 +269,12 @@ h3 {
 }
 
 .videos {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -249,7 +282,7 @@ h3 {
 #witzkeVideos,
 #mtsuVideos,
 #livingRoomVideos {
-    border-top: 1px solid #fbb040;
+  border-top: 1px solid #fbb040;
 }
 
 .addBorderBottom {
@@ -261,7 +294,7 @@ h3 {
   border-bottom: 1px solid #fbb040;
 }
 
-.moreCoverVideos, 
+.moreCoverVideos,
 .moreWitzkeVideos,
 .moreLivingRoomVideos {
   border-bottom: 1px solid #fbb040;
@@ -271,8 +304,7 @@ h3 {
   width: 100%;
 }
 
-.videos img:hover
-.videos-img-touch-start {
+.videos img:hover .videos-img-touch-start {
   cursor: pointer;
 }
 
@@ -282,6 +314,7 @@ h3 {
 }
 
 .blurred {
+  -webkit-filter: blur(2px) brightness(1.25);
   filter: blur(2px) brightness(1.25);
 }
 
@@ -291,7 +324,7 @@ h3 {
   text-align: center;
   width: 100%;
   top: 30%;
-  background: rgba(0,0,0,.8);
+  background: rgba(0, 0, 0, .8);
   padding-top: 1.5%;
 }
 
@@ -341,8 +374,6 @@ h3 {
   left: 0;
 }
 
-
-
 #popUpVideo iframe {
   width: 100%;
 }
@@ -380,12 +411,17 @@ h3 {
   padding: 0;
   padding-bottom: 2%;
   text-align: center;
-  display: flex; 
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   margin-bottom: 3%;
   width: 75%;
   margin: auto;
-  background: rgba(0,0,0,.5);
+  background: rgba(0, 0, 0, .5);
   border-radius: 2%;
   margin-bottom: 5%;
 }
@@ -397,6 +433,7 @@ h3 {
 
 .audio li:hover,
 audio-li-touch-start {
+  -webkit-filter: brightness(1.25);
   filter: brightness(1.25);
 }
 
@@ -434,8 +471,10 @@ audio-li-touch-start {
 }
 
 .music-content iframe:hover {
+  -webkit-filter: brightness(1.25);
   filter: brightness(1.25);
 }
+
 
 /*********BIO Page***********/
 
@@ -444,7 +483,7 @@ h1 {
 }
 
 .bioPageContent {
-  background: rgba(0,0,0,.35);
+  background: rgba(0, 0, 0, .35);
 }
 
 .bio-page p {
@@ -453,7 +492,10 @@ h1 {
 }
 
 .member-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   padding-bottom: 3%;
 }
@@ -469,9 +511,23 @@ h1 {
   text-align: center;
 }
 
+.bio-image-one {
+  background: url(../photoPageImg/IMG_0989.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  height: 300px;
+  border-top: 1px solid #fbb040;
+  border-bottom: 1px solid #fbb040;
+}
 
-.bio-page img {
-  width: 100%;
+.bio-image-two {
+  background: url(../photoPageImg/IMG_0983.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  max-width: 100%;
+  height: 300px;
   border-top: 1px solid #fbb040;
   border-bottom: 1px solid #fbb040;
 }
@@ -481,14 +537,18 @@ h1 {
 
 .pressContent,
 .performanceContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
   flex-flow: column;
   padding: 5%;
-
 }
 
 #pressPhoto {
-  background-image: url(/photoPageImg/Meredith%20Chase-Wedding%20Photos-0264.jpg);
+  background-image: url(../photoPageImg/Meredith%20Chase-Wedding%20Photos-0264.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -514,29 +574,38 @@ h1 {
 .article,
 .performance {
   border: 1px solid #fbb040;
-  background: rgba(0,0,0,.25);
+  background: rgba(0, 0, 0, .25);
   padding: 2%;
   margin-bottom: 5%;
 }
 
 .article:hover {
+  -webkit-filter: brightness(120%);
   filter: brightness(120%);
 }
 
 
 /*********BOOKING/CONTACT Page***********/
+
 .contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
 .booking-inqueries {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 5%;
   border: none;
   border-top: 1px solid #fbb040;
   border-bottom: 1px solid #fbb040;
-  background: rgba(0,0,0,.25);
+  background: rgba(0, 0, 0, .25);
 }
 
 .booking-inqueries legend {
@@ -576,16 +645,16 @@ h1 {
 }
 
 .contact-form button:hover {
-  box-shadow: 0 0 10px 5px rgba(0,0,0,.25);
+  -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, .25);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, .25);
   color: #fff;
 }
+
 
 /***********media query for small mobile screens in portrait*************/
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 736px) and (orientation: portrait) {
-  
   /**********Adjustments base font sizes***********/
-  
   h2 {
     font-size: 4rem;
   }
@@ -595,17 +664,13 @@ h1 {
   p {
     font-size: 1.75em;
   }
-  
   /**********Adjustments to nav***********/
-  
   .nav-button {
     font-size: 3em;
   }
-  
   .main-nav h2 {
     border-bottom: 3px dotted #fbb040;
   }
-  
 }
 
 @media only screen and (min-width: 450px) {
@@ -614,16 +679,13 @@ h1 {
     margin: auto;
     width: 75%;
   }
-
   #navArrow {
     width: 10%;
   }
-
   /***SOCIAL MEDIA ICONS***/
   .social-media ul {
     width: 50%;
   }
-
   /***basic page resize***/
   .videos,
   .photoPage,
@@ -634,46 +696,49 @@ h1 {
     width: 75%;
     margin: auto;
   }
-
   /***VIDEO page***/
   .coverText {
     width: 75%;
     left: 12.5%;
   }
-
 }
 
 @media only screen and (min-width: 800px) {
   body {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     min-height: 100vh;
   }
-
   #buttonAndArrow {
     margin: 0;
     padding-top: 10px;
+    pointer-events: none;
   }
-
   .main-nav-drop-down {
     position: relative;
     margin-top: -30px;
   }
-
   .main-nav {
+    -ms-flex-preferred-size: auto;
     flex-basis: auto;
     margin: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-line-pack: distribute;
     align-content: space-around;
     width: 75%;
     margin: auto;
   }
-
   .main-nav h2 {
     border: none;
     font-size: 1em;
   }
-
   /***SOCIAL MEDIA ICONS***/
   .social-media {
     margin: 40px;
@@ -681,89 +746,110 @@ h1 {
   .social-media ul {
     width: 25%;
   }
-
-
   /***COLUMN setup***/
   .photoPage,
   .videos,
   .pressAndPerformance {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
     width: 90%;
+    -ms-flex-line-pack: center;
     align-content: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
   }
-
   .column {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
+    -ms-flex-item-align: start;
     align-self: flex-start;
   }
-
   .column h3 {
     width: 100%;
     text-align: center;
   }
-
   /***PHOTO page***/
   .photoPage img {
     margin-bottom: -5px;
   }
-
   #photoOverlay img {
     max-height: 75%;
     width: auto;
     margin-top: 150px;
   }
-
   /***VIDEO page***/
   #popUpVideo {
     width: 75%;
     left: 12.5%;
   }
-
   .videoSize {
-  width: 70%;
-  left: 15%;
+    width: 70%;
+    left: 15%;
   }
-
-
   /***AUDIO page***/
   .music-content {
     padding-bottom: 23%;
   }
-
-
   .audioFlex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
     margin-top: 30px;
   }
-
   .streaming,
   .purchasing {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     width: 50%;
     text-align: center;
   }
-
-  /***PRESS page***/
-
+  /***BIO page***/
+  .member-list {
+    width: 50%;
+    margin: auto;
+  }
+  .bio-image-one {
+    width: 400px;
+    height: 200px;
+    float: left;
+    margin: 10px;
+  }
+  .bio-image-two {
+    display: none;
+  }
+  /***PRESS page**
   #pressPhoto {
     margin-top: 55px;
     height: 500px;
   }
-
+  
   /***BOOKING page***/
   .contact-form {
     width: 60%;
     margin: auto;
   }
-
-
 }
-
-
