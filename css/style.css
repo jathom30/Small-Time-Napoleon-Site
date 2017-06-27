@@ -714,14 +714,15 @@ h1 {
     flex-direction: column;
     min-height: 100vh;
   }
+  header {
+    display: flex;
+    flex-direction: column-reverse;
+  }
   #buttonAndArrow {
-    margin: 0;
-    padding-top: 10px;
     pointer-events: none;
   }
   .main-nav-drop-down {
     position: relative;
-    margin-top: -30px;
   }
   .main-nav {
     -ms-flex-preferred-size: auto;
