@@ -3,8 +3,8 @@ $('.section').children('div').hide();
 
 
 //once page loads, activate background animation
-$(document).ready(function() {
-  setTimeout(function() {
+$(document).ready(function () {
+  setTimeout(function () {
     $('.backgroundAnimation').addClass('loaded');
   }, 500); //wait 500ms to start animation
 });
@@ -39,12 +39,12 @@ $(sectionButton).click(function () {
 var tabClosers = ['footer', '.social-media', '.logo', '.backgroundAnimation'];
 
 function closeAllPages(clicked) {
-  $(clicked).click(function() {
+  $(clicked).click(function () {
     $(sectionButton).siblings('div').slideUp();
   });
 }
 
-for (i=0;i<tabClosers.length;i++) {
+for (i = 0; i < tabClosers.length; i++) {
   closeAllPages(tabClosers[i]);
 }
 
@@ -90,31 +90,7 @@ $overlay.click(function () {
   $overlay.hide();
 });
 
-
-//Pop-up Content
-const $popUp = $('#pop-up');
-const $facebookLikeButton = $('.facebook-like');
-const $cancelPopUp = $('.cancel-pop-up');
-
-$popUp.hide();
-
-$popUp.ready(function () {
-  $popUp.fadeIn(1000);
-})
-
-$facebookLikeButton.click(function () {
-  window.location.href = 'http://facebook.com/smalltimenapoleonband';
-});
-
-$cancelPopUp.click(function () {
-  $popUp.hide();
-});
-
 //Press Articles
-$('#article').click(function() {
+$('#article').click(function () {
   $(this).children('a');
 })
-
-
-
-

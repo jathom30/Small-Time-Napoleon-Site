@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Small Time Napoleon</title>
   <link rel="stylesheet" href="css/mainStyle.css" type="text/css" media="screen" title="no title" charset="utf-8">
@@ -134,11 +135,18 @@
       <section class="audio section">
         <h2>Audio</h2>
         <div id="music-player">
-          <div id="music-main-width">
-            <div class="main-music-iframe">
-              <iframe style="border: 0;" src="https://bandcamp.com/EmbeddedPlayer/album=438562157/size=large/bgcol=333333/linkcol=e99708/tracklist=false/artwork=small/track=99154348/transparent=true/" seamless><a href="http://smalltimenapoleon.bandcamp.com/album/cloud-machine">Cloud Machine by Small Time Napoleon</a></iframe>
-            </div>
+          <div class="audio-section-description">
+            <p>Listen to an exclusive selection of the band's newest release, "Too Big To Fail"</p>
           </div>
+          <div class="main-music-audio">
+            <div id="center-audio-image" class="audio-image">
+              <img src="../img/TooBigToFailCover.png">
+            </div>
+            <audio id="dear-l" controls controlsList="nodownload">
+                <source src="https://dl.dropboxusercontent.com/s/0rv14om4tpdc3ng/01%20Dear%20L%20062117.wav?dl=0" type="audio/wav">
+              </audio>
+          </div>
+
           <p class="to-more-pages"><a href="audio.html">More Audio</a></p>
         </div>
       </section>
@@ -246,4 +254,5 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/mainPageScript.js"></script>
 </body>
+
 </html>
