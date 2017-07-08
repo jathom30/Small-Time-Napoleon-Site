@@ -1,0 +1,19 @@
+// To Page Links
+
+.to-more-pages {
+  background: linear-gradient(to left, rgba(0, 0, 0, .25), $clear);
+  text-transform: uppercase;
+  font-size: .7em;
+  display: block;
+  text-align: right;
+}
+
+.to-more-pages a {
+  display: block;
+  padding: 2%;
+}
+
+.to-more-pages a:hover {
+  filter: brightness(1.25);
+}
+

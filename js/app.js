@@ -1,7 +1,7 @@
 const $navButton = $('.nav-button');
 const $nav = $('.main-nav');
 const $navButtonAndArrow = $('#buttonAndArrow');
-const $navArrow = $('<img id="navArrow" src="img/downArrow.png">');
+const $navArrow = $('<img id="navArrow" src="../img/downArrow.png">');
 
 //add overlay when nav is extended
 var $navOverlay = $('<div class="navOverlay"></div>');

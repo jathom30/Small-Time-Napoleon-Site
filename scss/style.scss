@@ -1,0 +1,39 @@
+// ======================================
+//  Partial Imports
+// ======================================
+
+// Utilities
+@import 'utilities/variables',
+        'utilities/mixins';
+
+// Base
+@import 'base/reset',
+        'base/base',
+        'base/logo-CTA',
+        'base/main-sections',
+        'base/social-media',
+        'base/mobile-view';
+
+// Background
+@import 'animation/background',
+        'animation/background-animation';
+
+// Main Page Divs
+@import 'main-page-sections/section-divs',
+        'main-page-sections/to-page-links';
+
+//All Other Pages
+@import 'other-pages/nav',
+        'other-pages/photo-page',
+        'other-pages/video-page',
+        'other-pages/audio-page',
+        'other-pages/bio-page',
+        'other-pages/press-page',
+        'other-pages/booking-page';
+
+//base media queries
+@import 'query/base',
+        'query/column-setup';
+
+
+

@@ -1,0 +1,46 @@
+// Main
+
+* {
+  box-sizing: border-box;
+  color: $gold;
+  font-family: 'Josefin Sans', 'sans-serif';
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: linear-gradient($dark-blue, $light-blue, $dark-blue);
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  min-height: 100%;
+}
+
+p {
+  margin: 1.5%;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  z-index: 10;
+}
+
+// Footer
+footer {
+  opacity: .25;
+  position: fixed;
+  z-index: -1;
+  width: 60%;
+  bottom: 0;
+  left: 20%;
+  text-align: center;
+  padding: 1%;
+}

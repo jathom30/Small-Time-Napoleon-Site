@@ -1,0 +1,39 @@
+//Booking Style
+@mixin inputs() {
+  width: 100%;
+  justify-content: center;
+  color: $dark-blue;
+  font-size: 1.25em;
+}
+
+//Flex style
+@mixin flex-style($dir, $wrap:no-wrap, $just: center, $margin: auto, $pad: null) {
+  display: flex;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $just;
+  margin: $margin;
+  padding: $pad;
+}
+
+//overlays
+@mixin overlay() {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  text-align: center;
+  background: $near-black;
+}
+
+//bio page div images
+@mixin div-pics() {
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  height: 300px;
+  border-top: 1px solid $gold;
+  border-bottom: 1px solid $gold;
+}

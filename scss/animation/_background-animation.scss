@@ -1,36 +1,3 @@
-
-
-/*******basic div setup********/
-
-.background-image,
-.sun,
-.spot-light-1,
-.main-building,
-.spot-light-2,
-.blimp,
-.foreground-buildings {
-  bottom: 0;
-  pointer-events: none;
-  position: fixed;
-  z-index: -1;
-  max-width: 1000px;
-  right: 0;
-  left: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-footer {
-  opacity: .25;
-  position: fixed;
-  z-index: -1;
-  width: 60%;
-  bottom: 0;
-  left: 20%;
-  text-align: center;
-  padding: 1%;
-}
-
 /*******div animations********/
 
 .spot-light-1 {

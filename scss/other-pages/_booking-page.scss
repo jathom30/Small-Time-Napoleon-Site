@@ -1,0 +1,38 @@
+.booking-info {
+  h1 {
+    margin-left: 5px;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  @media #{$lg-media} {
+    width: 60%;
+    margin: auto;
+  }
+}
+
+.booking-inqueries {
+  display: flex;
+  margin-bottom: 5%;
+  border: none;
+  border-top: 1px solid $gold;
+  border-bottom: 1px solid $gold;
+  background: $deep-shadow;
+  legend {
+    font-size: 1.25em;
+  }
+  label {
+    padding: 1.25%;
+  }
+  input {
+    width: 100%;
+    padding: 1.5%;
+    margin-bottom: 2%;
+    font-size: 1.25em;
+  }
+  textarea {
+    height: 80px;
+  }
+}

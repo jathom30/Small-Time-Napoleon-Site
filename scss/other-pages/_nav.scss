@@ -1,0 +1,119 @@
+//Nav
+.main-nav-drop-down {
+  position: fixed;
+  width: 100%;
+  top: 8%;
+  margin: auto;
+  text-align: center;
+  @media #{$lg-media} {
+    position: relative;
+  }
+}
+
+.main-nav {
+  @media #{$sm-media} {
+    margin: auto;
+    width: 75%;
+  }
+  @media #{$lg-media} {
+    flex-basis: auto;
+    margin: 0;
+    align-items: center;
+    align-content: space-around;
+    width: 75%;
+    margin: auto;
+  }
+  h2 {
+    text-align: center;
+    margin: 1%;
+    cursor: pointer;
+    padding: 1.5%;
+    border-bottom: 1px dotted $gold;
+    width: 100%;
+    &:hover ,
+    .main-nav-touch-start {
+      background: $deep-shadow;
+      filter: brightness(1.25);
+      cursor: pointer;
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 736px) and (orientation: portrait) {
+      border-bottom: 3px dotted $gold;
+    }
+    @media #{$lg-media} {
+      border: none;
+      font-size: 1em;
+    }
+  }
+  a {
+    display: block;
+  }
+}
+
+#buttonAndArrow {
+  margin: auto;
+  margin-top: 2%;
+  text-align: center;
+  min-height: 90px;
+  @media #{$lg-media} {
+    pointer-events: none;
+  }
+}
+
+#navArrow {
+  width: 20%;
+  padding: 3% 0;
+  @media #{$sm-media} {
+    width: 10%;
+  }
+}
+
+#buttonAndArrow:hover,
+.inDropDown:hover,
+.buttonAndArrow-touch-start,
+inDropDown-touch-start {
+  cursor: pointer;
+  filter: brightness(1.25);
+}
+
+.nav-button {
+  text-align: center;
+  padding: 10px;
+  background: none;
+  border: none;
+  font-size: 1.25em;
+  letter-spacing: 1em;
+  text-indent: 1em;
+  width: 100%;
+  text-transform: uppercase;
+  &:hover {
+    cursor: pointer;
+  }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 736px) and (orientation: portrait) {
+    font-size: 3em;
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.arrowSelected {
+  transform: scaleY(-1);
+  transition: .8s;
+}
+
+.navOverlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  text-align: center;
+  background: $deepest-shadow;
+}
+
+.spacer {
+  height: 50px;
+}

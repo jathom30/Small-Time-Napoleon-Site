@@ -1,0 +1,22 @@
+@media #{$lg-media} {
+  /***COLUMN setup***/
+  .photoPage,
+  .videos,
+  .pressAndPerformance {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 90%;
+    align-content: center;
+    align-items: flex-start;
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-self: flex-start;
+    h3 {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

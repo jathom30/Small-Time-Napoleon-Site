@@ -1,0 +1,90 @@
+.audio-page {
+  h2 {
+    padding: 0 0 1% 2%;
+  }
+  p {
+    padding: 5%;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    padding-bottom: 2%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3%;
+    width: 75%;
+    margin: auto;
+    background: $deeper-shadow;
+    border-radius: 2%;
+    margin-bottom: 5%;
+    a {
+      padding: 5% 15%;
+    }
+  }
+  li {
+    margin: auto;
+    padding-bottom: 4%;
+    &:hover {
+      filter: brightness(1.2);
+    }
+    img {
+      position: relative;
+      top: 15px;
+      width: 40px;
+      margin-right: 5px;
+      padding: 1%;
+    }
+  }
+}
+
+//for touch devices
+.audio-li-touch-start {
+  filter: brightness(1.25);
+}
+
+.musicIFrames {
+  width: 90%;
+  margin: auto;
+}
+
+.music-content {
+  margin: 4px;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 32%;
+  position: relative;
+  iframe {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+     &:hover {
+      filter: brightness(1.25);
+    }
+  }
+  @media #{$lg-media} {
+    padding-bottom: 23%;
+  }
+}
+
+@media #{$lg-media} {
+  .audioFlex {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    margin-top: 30px;
+  }
+  .streaming,
+  .purchasing {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+  }
+}
+
+
+
+

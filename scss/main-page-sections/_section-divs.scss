@@ -1,0 +1,336 @@
+
+@each $section in $sections {
+  @media #{$lg-media} {
+    #{$section} {
+      position: absolute;
+      left: 10%;
+//      top: 220px;
+      width: 80%;
+      background: linear-gradient(rgba(39, 35, 85, 1), rgba(40, 56, 145, .9), rgba(39, 35, 85, .8));
+      border-top: 1px solid $gold;
+      border-bottom: 1px solid $gold;
+    }
+  }
+  @media only screen and (min-width: 900px) {
+    #{$section} {
+//    top: 250px;
+      width: 70%;
+      left: 15%;
+    }
+  }
+  @media only screen and (min-width: 1270px) {
+    #{$section} {
+      width: 60%;
+      left: 20%;
+    }
+  }
+  @media only screen and (min-width: 1375px) {
+    #{$section} {
+      width: 55%;
+      left: 22.5%;
+    }
+  }
+  @media only screen and (min-width: 1500px) {
+    #{$section} {
+      width: 50%;
+      left: 25%;
+    }
+  }
+  @media only screen and (min-width: 1600px) {
+    #{$section} {
+      width: 45%;
+      left: 27.5%;
+    }
+  }
+}
+
+
+
+/********************PHOTO************************/
+
+#image-gallery {
+  display: flex;
+  flex-direction: column;
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    padding: 2%;
+    @media #{$sm-media} {
+      width: 75%;
+    }
+    @media #{$lg-media} {
+      width: 60%;
+    }
+  }
+  img {
+    border: none;
+    &:hover {
+      filter: brightness(1.25);
+    }
+    @media #{$sm-media} {
+      margin-top: -1px;
+    }
+  }
+  li {
+    @media only screen and (min-width: 900px) {
+      width: 40%;
+    }
+  }
+}
+
+.photo {
+  border-top: 1px dotted #fbb040;
+  @media #{$lg-media} {
+    border-top: none;
+  }
+  ul li {
+    list-style: none;
+    width: 50%;
+    justify-content: space-around;
+    margin-bottom: -4px;
+  }
+}
+
+.bio-page img {
+  width: 100%;
+}
+
+#overlay {
+  @include overlay();
+  img {
+    width: 100%;
+    margin-top: 80%;
+    @media #{$med-media} {
+      margin-top: 25%;
+    }
+    @media only screen and (min-width: 1100px) {
+      width: 50%;
+    }
+    @media only screen and (min-width: 1270px) {
+      margin-top: 10%;
+      width: 60%;
+    }
+    @media only screen and (min-width: 1500px) {
+      margin-top: 5%;
+    }
+  }
+  p {
+    color: $gold;
+    margin: auto;
+    padding: 1.25%;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/********VIDEO**********/
+
+.video video {
+  display: flex;
+  flex-flow: column wrap;
+  margin: auto;
+  border-radius: 3px;
+}
+
+#video-players {
+  video {
+    @media #{$sm-media} {
+      width: 80%;
+    }
+    @media #{$lg-media} {
+      padding: 2%;
+    }
+  }
+  @media #{$lg-media} {
+    p {
+      margin: auto;
+      width: 80%;
+    }
+    a {
+      margin-bottom: 2%;
+    }
+  }
+}
+
+
+/********AUDIO**********/
+
+.main-music-audio {
+  text-align: center;
+}
+
+.audio-section-description {
+  text-align: center;
+}
+
+.audio-image {
+  width: 50%;
+}
+
+#center-audio-image {
+  margin: auto;
+}
+
+@media #{$lg-media} {
+  #music-player {
+    iframe {
+      margin-top: 5%;
+      width: 100%;
+    }
+  }
+}
+
+/********BIO**********/
+
+.bio-page {
+  p {
+    padding: 0 15px;
+    text-align: left;
+  }
+  img {
+    padding: 15px 0px;
+  }
+}
+
+.member-list {
+  display: flex;
+  justify-content: space-around;
+  ul {
+    padding: 0px;
+    margin: auto;
+  }
+  li {
+  list-style: none;
+    padding: 5px;
+    text-align: center;
+  }
+}
+
+
+.bio-content {
+  @media #{$sm-media} {
+    text-align: center;
+    p {
+      text-align: left;
+    }
+    img {
+      width: 80%;
+    }
+    a {
+      text-align: right;
+    }
+  }
+  div {
+    @media #{$lg-media} {
+      font-size: 1.1em;
+      padding: 1% 5%;
+    }
+  }
+}
+
+/********PRESS AND PERFORMANCE**********/
+
+.press-content {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.articleTitle {
+  list-style-type: none;
+  text-align: right;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 1.25%;
+}
+
+.articles {
+  width: 100%;
+  padding: 5%;
+  display: flex;
+  flex-flow: column nowrap;
+  @media only screen and (min-width: 900px) {
+    padding: 5% 10%;
+  }
+}
+
+.article {
+  margin: auto;
+  border: 1px solid $gold;
+  padding: 2%;
+  background: $deep-shadow;
+}
+
+.article:hover {
+  filter: brightness(120%);
+}
+
+
+/********CALENDAR**********/
+
+.calendar-content {
+  display: flex;
+  flex-flow: column wrap;
+  iframe {
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    @media #{$lg-media} {
+      margin-top: 5%;
+    }
+  }
+}
+
+
+/********BOOKING/CONTACT**********/
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  @media #{$sm-media} {
+    margin: auto;
+    width: 80%;
+  }
+}
+
+.contact-text {
+  @media #{$lg-media} {
+    padding: 2% 10%;
+    font-size: 1.1em;
+  }
+}
+
+.booking-inqueries,
+.contact-inqueries {
+  display: flex;
+  margin-bottom: 5%;
+  label {
+    padding: 1.25%;
+  }
+  input {
+    @include inputs();
+  }
+  textarea {
+    @include inputs();
+    width: 100%;
+  }
+}
+
+.contact-form button {
+  background: $gold;
+  color: $dark-blue;
+  border-width: 0px;
+  padding: 2%;
+  font-size: 1em;
+  border-radius: 3px;
+  width: 75%;
+  margin: auto;
+  margin-bottom: 5%;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 0 10px 5px $shadow;;
+    color: white;
+  }
+}

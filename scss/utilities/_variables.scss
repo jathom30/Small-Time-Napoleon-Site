@@ -1,0 +1,51 @@
+//Colors
+$gold: #fbb141;
+$dark-blue: #272355;
+$light-blue: #283891;
+$light-white: rgba(255,255,255,.2);
+$shadow: rgba(0,0,0,.15);
+$deep-shadow: rgba(0,0,0,.35);
+$deeper-shadow: rgba(0,0,0,.5);
+$deepest-shadow: rgba(0,0,0,.65);
+$near-black: rgba(0,0,0,.8);
+$div-darken: rgba(14,12,29,.2);
+$clear: rgba(0,0,0,0);
+
+//Background Image divs
+$background-images: (
+  'background-image',
+  'sun',
+  'spot-light-1',
+  'main-building',
+  'spot-light-2',
+  'blimp',
+  'foreground-buildings',
+);
+
+
+//Media Query Min-Width's
+$sm-media: 'only screen and (min-width: 450px)';
+$med-media: 'only screen and (min-width: 650px)';
+$lg-media: 'only screen and (min-width: 800px)';
+
+//Section names for large layout home page
+$sections: (
+  '#image-gallery',
+  '#video-players',
+  '#music-player',
+  '.bio-content',
+  '.press-content',
+  '.calendar-content',
+  '.contact-hide',
+);
+
+//basic page resize
+$pages: (
+  '.videos',
+  '.photoPage',
+  '.audio-page',
+  '.bio-page',
+  '.pressAndPerformance',
+  '.booking-info'
+);
+

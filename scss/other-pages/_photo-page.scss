@@ -1,0 +1,90 @@
+.photoPage {
+  div {
+    @include flex-style($dir: row, $wrap: wrap);
+    img {
+      width: 100%;
+      &:hover {
+        filter: brightness(1.25);
+      }
+      @media #{$lg-media} {
+        margin-bottom: -5px;
+      }
+    }
+  }
+  a {
+    width: 50%;
+    margin-bottom: -1%;
+  }
+  h3 {
+    padding: 3%;
+  }
+}
+
+.photoPage-div-img-touch-start {
+  filter: brightness(1.25);
+}
+
+#photos201617,
+#photos201415,
+#photos2013 {
+  border-top: 1px solid #fbb040;
+}
+
+.photoButton {
+  text-align: center;
+  padding: 1%;
+  background: $div-darken;
+  width: 50%;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  border-radius: 3px;
+  &:hover {
+    background: $deepest-shadow;
+    cursor: pointer;
+  }
+}
+
+.photoButton-touch-start {
+  background: $deepest-shadow;
+  cursor: pointer;
+}
+
+#photoOverlay {
+  @include overlay();
+  img {
+    margin: auto;
+    margin-top: 50%;
+    width: 95%;
+    @media #{$lg-media} {
+      max-height: 75%;
+      width: auto;
+      margin-top: 150px;
+    }
+  }
+  p {
+    color: $gold;
+    margin: auto;
+    padding: 1.25%;
+    width: 100%;
+    text-align: center;
+    @media #{$lg-media} {
+      font-size: 1.5em;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,70 @@
+// Main Section Setup
+
+.section {
+  border-bottom: 1px dotted $gold;
+  background: $deep-shadow;
+  margin: 0;
+  @media only screen and (min-device-width: 320px) and (max-device-width: 736px) and (orientation: portrait) {
+    border-bottom: 3px dotted $gold;
+  }
+  @media #{$sm-media} {
+    width: 80%;
+    margin: auto;
+  }
+  @media #{$sm-media} {
+    width: 70%;
+  }
+  @media #{$lg-media} {
+    border: none;
+    background: none;
+    
+  }
+  h2 {
+    margin: 0;
+    cursor: pointer;
+    padding: 3.5%;
+    &:hover {
+      background: $deeper-shadow;
+    }
+    @media #{$lg-media} {
+      text-align: center;
+      padding: 5%;
+      font-size: 1.25em;
+    }
+  }
+  img {
+    max-width: 100%;
+    border-top: 1px solid $gold;
+    border-bottom: 1px solid $gold;
+    box-shadow: 0 2px 0 0 $shadow;
+  }
+  div {
+    margin: 1% 0;
+  }
+}
+
+.sectionListElements {
+  max-width: 1680px;
+  @media #{$lg-media} {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+  }
+  @media only screen and (min-width: 1270px) {
+    width: 60%;
+  }
+}
+
+@media #{$lg-media} {
+  .pageSelectors {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 100vh;
+  }
+}
+
+

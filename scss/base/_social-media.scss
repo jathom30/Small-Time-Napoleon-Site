@@ -1,0 +1,48 @@
+// Social Media Icons
+
+.social-media {
+  padding: 1%;
+  margin-bottom: 12%;
+  @media #{$sm-media} {
+    margin: 3% 0;
+  }
+  @media #{$med-media} {
+    padding: 0;
+    order: 1;
+  }
+  @media #{$lg-media} {
+    order: 2;
+    margin-bottom: 5%;
+    ul {
+      width: 25%;
+    }
+  }
+  ul {
+    display: flex;
+    padding: 0px;
+    align-content: space-between;
+    width: 80%;
+    margin: auto;
+    @media #{$sm-media} {
+      width: 50%;
+    }
+    @media #{$med-media} {
+      width: 35%;
+    }
+    @media only screen and (min-width: 1270px) {
+      width: 20%;
+    }
+  }
+  li {
+    list-style: none;
+    padding: 0 1%;
+    text-align: center;
+  }
+  img {
+    border-radius: 22%;
+    width: 75%;
+    &:hover {
+      filter: brightness(1.2);
+    }
+  } 
+}
