@@ -31,3 +31,10 @@
     flex-direction: column-reverse;
   }
 }
+
+@each $page in $pages {
+  #{$page} {
+    max-width: 1000px;
+  }
+}
+ 

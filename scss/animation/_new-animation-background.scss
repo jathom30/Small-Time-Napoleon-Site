@@ -14,37 +14,58 @@
   max-width: 1000px;
 }
 
+.svg-container {
+  position: absolute;
+  @media screen and (min-width: 1000px) {
+    position: relative;
+  }
+  height: auto;
+  width: 100%;
+  padding-bottom: 100%;
+  bottom: 0;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .flat-background-image {
   position: absolute;
-  display: block;
-  bottom: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
-.fifth-buildings {
-  animation: fifth-slide 2s ease-in-out forwards;
-}
+//svg {
+//	width: 100%;
+//	height: 100%;
+//	position: absolute;
+//	top: 0;
+//	left: 0;
+//}
 
-.fourth-buildings {
-  animation: fourth-slide 2s ease-in-out forwards;
-}
-
-.main-building {
-  animation: main-slide 2s ease-in-out forwards;
-}
-
-.third-buildings {
-  animation: third-slide 2s ease-in-out forwards;
-}
-
-.second-buildings {
-  animation: second-slide 2s ease-in-out forwards;
-}
-
-.front-buildings {
-  animation: front-slide 2s ease-in-out forwards;
-}
+//
+//.fifth-buildings {
+//  animation: fifth-slide 2s ease-in-out forwards;
+//}
+//
+//.fourth-buildings {
+//  animation: fourth-slide 2s ease-in-out forwards;
+//}
+//
+//.main-building {
+//  animation: main-slide 2s ease-in-out forwards;
+//}
+//
+//.third-buildings {
+//  animation: third-slide 2s ease-in-out forwards;
+//}
+//
+//.second-buildings {
+//  animation: second-slide 2s ease-in-out forwards;
+//}
+//
+//.front-buildings {
+//  animation: front-slide 2s ease-in-out forwards;
+//}
 
 .blimp {
   animation: blimp-bounce 2s ease-in-out alternate infinite;

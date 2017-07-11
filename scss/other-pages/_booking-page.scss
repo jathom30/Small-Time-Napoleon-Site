@@ -16,11 +16,12 @@
   }
 }
 
-.contact-form {
+.booking-form .contact-form {
   display: flex;
   flex-direction: column;
   @media #{$lg-media} {
-//    width: 40%;
+    width: 100%;
+    padding: 0 10px;
     margin: auto;
   }
 }

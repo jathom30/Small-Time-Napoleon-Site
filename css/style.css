@@ -454,10 +454,6 @@ footer {
 .home {
   text-align: center; }
 
-.name-logo {
-  width: 100%;
-  height: auto; }
-
 .logo {
   text-align: center;
   width: 100%;
@@ -469,17 +465,34 @@ footer {
       padding: 0; } }
   @media only screen and (min-width: 800px) {
     .logo {
-      width: 400px;
-      order: 1; } }
-  @media only screen and (min-width: 450px) {
-    .logo svg {
-      width: 70%; } }
-  @media only screen and (min-width: 650px) {
-    .logo svg {
-      width: 100%;
-      height: auto; } }
+      width: 300px;
+      order: 1;
+      height: 200px;
+      margin-top: -20px; } }
 
-.mainPageCallToAction {
+.logo-container {
+  width: 100%;
+  height: 100%; }
+
+.svg-logo-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 25%; }
+
+.name-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+@media only screen and (min-width: 800px) {
+  .mainPageCallToAction {
+    order: 2;
+    height: 50vh; } }
+
+.cta-div {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -488,39 +501,38 @@ footer {
   margin-bottom: 10%;
   background: rgba(255, 255, 255, 0.2); }
   @media only screen and (min-width: 650px) {
-    .mainPageCallToAction {
+    .cta-div {
       width: 75%;
       margin: auto;
       margin-bottom: 10%; } }
   @media only screen and (min-width: 800px) {
-    .mainPageCallToAction {
+    .cta-div {
       height: 200px;
       border-radius: 3px;
       box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
-      width: 60%;
-      margin: auto;
-      order: 1; }
-      .mainPageCallToAction:hover {
+      width: 500px;
+      margin: auto; }
+      .cta-div:hover {
         box-shadow: none; }
-      .mainPageCallToAction h3 {
+      .cta-div h3 {
         font-size: 1.5em; } }
-  .mainPageCallToAction a:hover {
+  .cta-div a:hover {
     cursor: pointer;
     filter: brightness(1.1);
     text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.15); }
-  .mainPageCallToAction div {
+  .cta-div div {
     width: 50%;
     padding: 5%; }
-  .mainPageCallToAction h3 {
+  .cta-div h3 {
     text-align: center;
     text-transform: uppercase;
     font-weight: 100; }
-  .mainPageCallToAction img {
+  .cta-div img {
     align-self: center;
     box-shadow: 5px 10px 2px -2px rgba(0, 0, 0, 0.15);
     transform: rotate(3deg); }
     @media only screen and (min-width: 800px) {
-      .mainPageCallToAction img {
+      .cta-div img {
         width: 75%; } }
 
 @media only screen and (min-width: 800px) {
@@ -675,36 +687,6 @@ footer {
   /**********Adjustments to Contact on Index***********/
   .contact-form button {
     font-size: 2em; } }
-@keyframes fifth-slide {
-  0% {
-    transform: translate3d(0, 0, 0); }
-  100% {
-    transform: translate3d(0, 250px, 0); } }
-@keyframes fourth-slide {
-  0% {
-    transform: translate3d(0, 0, 0); }
-  100% {
-    transform: translate3d(0, 200px, 0); } }
-@keyframes main-slide {
-  0% {
-    transform: translate3d(0, 0, 0); }
-  100% {
-    transform: translate3d(0, 150px, 0); } }
-@keyframes third-slide {
-  0% {
-    transform: translate3d(0, 0, 0); }
-  100% {
-    transform: translate3d(0, 100px, 0); } }
-@keyframes second-slide {
-  0% {
-    transform: translate3d(0, 0, 0); }
-  100% {
-    transform: translate3d(0, 50px, 0); } }
-@keyframes front-slide {
-  0% {
-    transform: translate3d(0, 0, 0); }
-  100% {
-    transform: translate3d(0, 25px, 0); } }
 @keyframes blimp-bounce {
   0% {
     transform: translate3d(0, -5%, 0); }
@@ -725,30 +707,23 @@ footer {
   right: 0;
   max-width: 1000px; }
 
+.svg-container {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  padding-bottom: 100%;
+  bottom: 0;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto; }
+  @media screen and (min-width: 1000px) {
+    .svg-container {
+      position: relative; } }
+
 .flat-background-image {
   position: absolute;
-  display: block;
-  bottom: 0;
   width: 100%;
-  height: auto; }
-
-.fifth-buildings {
-  animation: fifth-slide 2s ease-in-out forwards; }
-
-.fourth-buildings {
-  animation: fourth-slide 2s ease-in-out forwards; }
-
-.main-building {
-  animation: main-slide 2s ease-in-out forwards; }
-
-.third-buildings {
-  animation: third-slide 2s ease-in-out forwards; }
-
-.second-buildings {
-  animation: second-slide 2s ease-in-out forwards; }
-
-.front-buildings {
-  animation: front-slide 2s ease-in-out forwards; }
+  height: 100%; }
 
 .blimp {
   animation: blimp-bounce 2s ease-in-out alternate infinite; }
@@ -1594,11 +1569,13 @@ header {
   .booking-form {
     width: 50%; } }
 
-.contact-form {
+.booking-form .contact-form {
   display: flex;
   flex-direction: column; }
   @media only screen and (min-width: 800px) {
-    .contact-form {
+    .booking-form .contact-form {
+      width: 100%;
+      padding: 0 10px;
       margin: auto; } }
 
 .booking-inqueries {
@@ -1663,6 +1640,24 @@ header {
   header {
     display: flex;
     flex-direction: column-reverse; } }
+.videos {
+  max-width: 1000px; }
+
+.photoPage {
+  max-width: 1000px; }
+
+.audio-page {
+  max-width: 1000px; }
+
+.bio-page {
+  max-width: 1000px; }
+
+.pressAndPerformance {
+  max-width: 1000px; }
+
+.booking-info {
+  max-width: 1000px; }
+
 @media only screen and (min-width: 800px) {
   /***COLUMN setup***/
   .photoPage,
