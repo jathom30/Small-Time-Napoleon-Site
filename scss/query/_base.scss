@@ -14,7 +14,7 @@
 @media #{$sm-media} {
   @each $page in $pages {
     #{$page} {
-      width: 75%;
+      width: 90%;
       margin: auto;
     }
   }

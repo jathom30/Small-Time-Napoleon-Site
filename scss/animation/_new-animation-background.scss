@@ -1,0 +1,62 @@
+.background-container {
+  position: fixed;
+  display: block;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: -1;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 1000px;
+}
+
+.flat-background-image {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+
+.fifth-buildings {
+  animation: fifth-slide 2s ease-in-out forwards;
+}
+
+.fourth-buildings {
+  animation: fourth-slide 2s ease-in-out forwards;
+}
+
+.main-building {
+  animation: main-slide 2s ease-in-out forwards;
+}
+
+.third-buildings {
+  animation: third-slide 2s ease-in-out forwards;
+}
+
+.second-buildings {
+  animation: second-slide 2s ease-in-out forwards;
+}
+
+.front-buildings {
+  animation: front-slide 2s ease-in-out forwards;
+}
+
+.blimp {
+  animation: blimp-bounce 2s ease-in-out alternate infinite;
+}
+
+
+
+
+
+
+
+
+
+
+

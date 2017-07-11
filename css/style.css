@@ -420,7 +420,7 @@ a {
   text-decoration: none; }
 
 body {
-  background: linear-gradient(#272355, #283891, #272355);
+  background: #110F3A;
   display: flex;
   flex-direction: column; }
 
@@ -454,30 +454,30 @@ footer {
 .home {
   text-align: center; }
 
+.name-logo {
+  width: 100%;
+  height: auto; }
+
 .logo {
   text-align: center;
   width: 100%;
-  margin: auto;
-  margin-top: 3%;
-  padding-top: 5%; }
+  margin: auto; }
   @media only screen and (min-width: 650px) {
     .logo {
       margin-top: 0;
+      width: 300px;
       padding: 0; } }
   @media only screen and (min-width: 800px) {
     .logo {
-      margin-top: 0;
-      padding-top: 2%; } }
+      width: 400px;
+      order: 1; } }
   @media only screen and (min-width: 450px) {
-    .logo img {
+    .logo svg {
       width: 70%; } }
   @media only screen and (min-width: 650px) {
-    .logo img {
-      width: 35%; } }
-  @media only screen and (min-width: 1100px) {
-    .logo img {
-      width: 30%;
-      padding: 0; } }
+    .logo svg {
+      width: 100%;
+      height: auto; } }
 
 .mainPageCallToAction {
   display: flex;
@@ -486,8 +486,7 @@ footer {
   justify-content: space-around;
   width: 100%;
   margin-bottom: 10%;
-  background: rgba(255, 255, 255, 0.2);
-  overflow: hidden; }
+  background: rgba(255, 255, 255, 0.2); }
   @media only screen and (min-width: 650px) {
     .mainPageCallToAction {
       width: 75%;
@@ -495,11 +494,12 @@ footer {
       margin-bottom: 10%; } }
   @media only screen and (min-width: 800px) {
     .mainPageCallToAction {
-      background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0));
+      height: 200px;
+      border-radius: 3px;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
       width: 60%;
       margin: auto;
-      order: 1;
-      flex-grow: 2; }
+      order: 1; }
       .mainPageCallToAction:hover {
         box-shadow: none; }
       .mainPageCallToAction h3 {
@@ -519,6 +519,9 @@ footer {
     align-self: center;
     box-shadow: 5px 10px 2px -2px rgba(0, 0, 0, 0.15);
     transform: rotate(3deg); }
+    @media only screen and (min-width: 800px) {
+      .mainPageCallToAction img {
+        width: 75%; } }
 
 @media only screen and (min-width: 800px) {
   .disableClickMain {
@@ -565,14 +568,19 @@ footer {
   @media only screen and (min-width: 800px) {
     .sectionListElements {
       display: flex;
+      top: 10px;
+      right: 10px;
       flex-flow: row nowrap;
       justify-content: space-between;
       align-items: center;
-      width: 75%;
+      width: 70%;
       margin: auto; } }
   @media only screen and (min-width: 1270px) {
     .sectionListElements {
       width: 60%; } }
+
+.pageSelectors {
+  max-width: 1000; }
 
 @media only screen and (min-width: 800px) {
   .pageSelectors {
@@ -667,330 +675,203 @@ footer {
   /**********Adjustments to Contact on Index***********/
   .contact-form button {
     font-size: 2em; } }
-.background-image {
-  bottom: 0;
-  pointer-events: none;
+@keyframes fifth-slide {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  100% {
+    transform: translate3d(0, 250px, 0); } }
+@keyframes fourth-slide {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  100% {
+    transform: translate3d(0, 200px, 0); } }
+@keyframes main-slide {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  100% {
+    transform: translate3d(0, 150px, 0); } }
+@keyframes third-slide {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  100% {
+    transform: translate3d(0, 100px, 0); } }
+@keyframes second-slide {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  100% {
+    transform: translate3d(0, 50px, 0); } }
+@keyframes front-slide {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  100% {
+    transform: translate3d(0, 25px, 0); } }
+@keyframes blimp-bounce {
+  0% {
+    transform: translate3d(0, -5%, 0); }
+  100% {
+    transform: translate3d(0, 5%, 0); } }
+.background-container {
   position: fixed;
-  z-index: -1;
-  max-width: 1000px;
-  right: 0;
-  left: 0;
+  display: block;
+  padding: 0;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  z-index: -1;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 1000px; }
 
-.sun {
+.flat-background-image {
+  position: absolute;
+  display: block;
   bottom: 0;
-  pointer-events: none;
-  position: fixed;
-  z-index: -1;
-  max-width: 1000px;
-  right: 0;
-  left: 0;
-  margin-left: auto;
-  margin-right: auto; }
+  width: 100%;
+  height: auto; }
 
-.spot-light-1 {
-  bottom: 0;
-  pointer-events: none;
-  position: fixed;
-  z-index: -1;
-  max-width: 1000px;
-  right: 0;
-  left: 0;
-  margin-left: auto;
-  margin-right: auto; }
+.fifth-buildings {
+  animation: fifth-slide 2s ease-in-out forwards; }
+
+.fourth-buildings {
+  animation: fourth-slide 2s ease-in-out forwards; }
 
 .main-building {
-  bottom: 0;
-  pointer-events: none;
-  position: fixed;
-  z-index: -1;
-  max-width: 1000px;
-  right: 0;
-  left: 0;
-  margin-left: auto;
-  margin-right: auto; }
+  animation: main-slide 2s ease-in-out forwards; }
 
-.spot-light-2 {
-  bottom: 0;
-  pointer-events: none;
-  position: fixed;
-  z-index: -1;
-  max-width: 1000px;
-  right: 0;
-  left: 0;
-  margin-left: auto;
-  margin-right: auto; }
+.third-buildings {
+  animation: third-slide 2s ease-in-out forwards; }
+
+.second-buildings {
+  animation: second-slide 2s ease-in-out forwards; }
+
+.front-buildings {
+  animation: front-slide 2s ease-in-out forwards; }
 
 .blimp {
-  bottom: 0;
-  pointer-events: none;
-  position: fixed;
-  z-index: -1;
-  max-width: 1000px;
-  right: 0;
-  left: 0;
-  margin-left: auto;
-  margin-right: auto; }
-
-.foreground-buildings {
-  bottom: 0;
-  pointer-events: none;
-  position: fixed;
-  z-index: -1;
-  max-width: 1000px;
-  right: 0;
-  left: 0;
-  margin-left: auto;
-  margin-right: auto; }
-
-/*******div animations********/
-.spot-light-1 {
-  transform: rotate(-5deg) scale(1.5);
-  transition: transform 4.2s ease-in-out 1s;
-  transform-origin: bottom left; }
-
-.backgroundAnimation.loaded .spot-light-1 {
-  transform: rotate(5deg); }
-
-.backgroundAnimation.clicked .spot-light-1 {
-  transform: rotate(-2deg); }
-
-.spot-light-2 {
-  transform: rotate(2deg) scale(1.2);
-  transform-origin: bottom right;
-  transition: transform 3900ms cubic-bezier(0.2, -0.1, 0.71, 1.1); }
-
-.backgroundAnimation.loaded .spot-light-2 {
-  transform: rotate(-2deg); }
-
-.backgroundAnimation.clicked .spot-light-2 {
-  transform: rotate(12deg); }
-
-.blimp {
-  animation: blimpBounce 4s ease-in-out 0s infinite alternate forwards running; }
-
-@keyframes blimpBounce {
-  from {
-    transform: translate(0px, 10px); }
-  to {
-    transform: translate(0, 0); } }
-.sun {
-  transform: scale(0.75);
-  transition: transform 4s ease-in-out; }
-
-.backgroundAnimation.loaded .sun {
-  transform: scale(1); }
-
-.background-image {
-  transform: translate(0px, -2px);
-  transition: transform 4s ease-in-out; }
-
-.backgroundAnimation.loaded .background-image {
-  transform: translate(0px, 40px); }
-
-.main-building {
-  transition: transform 4s ease-in-out; }
-
-.backgroundAnimation.loaded .main-building {
-  transform: translate(0px, 20px); }
+  animation: blimp-bounce 2s ease-in-out alternate infinite; }
 
 @media only screen and (min-width: 800px) {
   #image-gallery {
     position: absolute;
-    left: 10%;
     width: 80%;
+    left: 10%;
+    right: 10%;
     background: linear-gradient(#272355, rgba(40, 56, 145, 0.9), rgba(39, 35, 85, 0.8));
     border-top: 1px solid #fbb141;
     border-bottom: 1px solid #fbb141; } }
 @media only screen and (min-width: 900px) {
   #image-gallery {
-    width: 70%;
-    left: 15%; } }
+    width: 75%;
+    left: 12.5%; } }
 @media only screen and (min-width: 1270px) {
   #image-gallery {
     width: 60%;
     left: 20%; } }
-@media only screen and (min-width: 1375px) {
-  #image-gallery {
-    width: 55%;
-    left: 22.5%; } }
-@media only screen and (min-width: 1500px) {
-  #image-gallery {
-    width: 50%;
-    left: 25%; } }
-@media only screen and (min-width: 1600px) {
-  #image-gallery {
-    width: 45%;
-    left: 27.5%; } }
 @media only screen and (min-width: 800px) {
   #video-players {
     position: absolute;
-    left: 10%;
     width: 80%;
+    left: 10%;
+    right: 10%;
     background: linear-gradient(#272355, rgba(40, 56, 145, 0.9), rgba(39, 35, 85, 0.8));
     border-top: 1px solid #fbb141;
     border-bottom: 1px solid #fbb141; } }
 @media only screen and (min-width: 900px) {
   #video-players {
-    width: 70%;
-    left: 15%; } }
+    width: 75%;
+    left: 12.5%; } }
 @media only screen and (min-width: 1270px) {
   #video-players {
     width: 60%;
     left: 20%; } }
-@media only screen and (min-width: 1375px) {
-  #video-players {
-    width: 55%;
-    left: 22.5%; } }
-@media only screen and (min-width: 1500px) {
-  #video-players {
-    width: 50%;
-    left: 25%; } }
-@media only screen and (min-width: 1600px) {
-  #video-players {
-    width: 45%;
-    left: 27.5%; } }
 @media only screen and (min-width: 800px) {
   #music-player {
     position: absolute;
-    left: 10%;
     width: 80%;
+    left: 10%;
+    right: 10%;
     background: linear-gradient(#272355, rgba(40, 56, 145, 0.9), rgba(39, 35, 85, 0.8));
     border-top: 1px solid #fbb141;
     border-bottom: 1px solid #fbb141; } }
 @media only screen and (min-width: 900px) {
   #music-player {
-    width: 70%;
-    left: 15%; } }
+    width: 75%;
+    left: 12.5%; } }
 @media only screen and (min-width: 1270px) {
   #music-player {
     width: 60%;
     left: 20%; } }
-@media only screen and (min-width: 1375px) {
-  #music-player {
-    width: 55%;
-    left: 22.5%; } }
-@media only screen and (min-width: 1500px) {
-  #music-player {
-    width: 50%;
-    left: 25%; } }
-@media only screen and (min-width: 1600px) {
-  #music-player {
-    width: 45%;
-    left: 27.5%; } }
 @media only screen and (min-width: 800px) {
   .bio-content {
     position: absolute;
-    left: 10%;
     width: 80%;
+    left: 10%;
+    right: 10%;
     background: linear-gradient(#272355, rgba(40, 56, 145, 0.9), rgba(39, 35, 85, 0.8));
     border-top: 1px solid #fbb141;
     border-bottom: 1px solid #fbb141; } }
 @media only screen and (min-width: 900px) {
   .bio-content {
-    width: 70%;
-    left: 15%; } }
+    width: 75%;
+    left: 12.5%; } }
 @media only screen and (min-width: 1270px) {
   .bio-content {
     width: 60%;
     left: 20%; } }
-@media only screen and (min-width: 1375px) {
-  .bio-content {
-    width: 55%;
-    left: 22.5%; } }
-@media only screen and (min-width: 1500px) {
-  .bio-content {
-    width: 50%;
-    left: 25%; } }
-@media only screen and (min-width: 1600px) {
-  .bio-content {
-    width: 45%;
-    left: 27.5%; } }
 @media only screen and (min-width: 800px) {
   .press-content {
     position: absolute;
-    left: 10%;
     width: 80%;
+    left: 10%;
+    right: 10%;
     background: linear-gradient(#272355, rgba(40, 56, 145, 0.9), rgba(39, 35, 85, 0.8));
     border-top: 1px solid #fbb141;
     border-bottom: 1px solid #fbb141; } }
 @media only screen and (min-width: 900px) {
   .press-content {
-    width: 70%;
-    left: 15%; } }
+    width: 75%;
+    left: 12.5%; } }
 @media only screen and (min-width: 1270px) {
   .press-content {
     width: 60%;
     left: 20%; } }
-@media only screen and (min-width: 1375px) {
-  .press-content {
-    width: 55%;
-    left: 22.5%; } }
-@media only screen and (min-width: 1500px) {
-  .press-content {
-    width: 50%;
-    left: 25%; } }
-@media only screen and (min-width: 1600px) {
-  .press-content {
-    width: 45%;
-    left: 27.5%; } }
 @media only screen and (min-width: 800px) {
   .calendar-content {
     position: absolute;
-    left: 10%;
     width: 80%;
+    left: 10%;
+    right: 10%;
     background: linear-gradient(#272355, rgba(40, 56, 145, 0.9), rgba(39, 35, 85, 0.8));
     border-top: 1px solid #fbb141;
     border-bottom: 1px solid #fbb141; } }
 @media only screen and (min-width: 900px) {
   .calendar-content {
-    width: 70%;
-    left: 15%; } }
+    width: 75%;
+    left: 12.5%; } }
 @media only screen and (min-width: 1270px) {
   .calendar-content {
     width: 60%;
     left: 20%; } }
-@media only screen and (min-width: 1375px) {
-  .calendar-content {
-    width: 55%;
-    left: 22.5%; } }
-@media only screen and (min-width: 1500px) {
-  .calendar-content {
-    width: 50%;
-    left: 25%; } }
-@media only screen and (min-width: 1600px) {
-  .calendar-content {
-    width: 45%;
-    left: 27.5%; } }
 @media only screen and (min-width: 800px) {
   .contact-hide {
     position: absolute;
-    left: 10%;
     width: 80%;
+    left: 10%;
+    right: 10%;
     background: linear-gradient(#272355, rgba(40, 56, 145, 0.9), rgba(39, 35, 85, 0.8));
     border-top: 1px solid #fbb141;
     border-bottom: 1px solid #fbb141; } }
 @media only screen and (min-width: 900px) {
   .contact-hide {
-    width: 70%;
-    left: 15%; } }
+    width: 75%;
+    left: 12.5%; } }
 @media only screen and (min-width: 1270px) {
   .contact-hide {
     width: 60%;
     left: 20%; } }
-@media only screen and (min-width: 1375px) {
-  .contact-hide {
-    width: 55%;
-    left: 22.5%; } }
-@media only screen and (min-width: 1500px) {
-  .contact-hide {
-    width: 50%;
-    left: 25%; } }
-@media only screen and (min-width: 1600px) {
-  .contact-hide {
-    width: 45%;
-    left: 27.5%; } }
 /********************PHOTO************************/
 #image-gallery {
   display: flex;
@@ -1702,13 +1583,22 @@ header {
 
 .booking-info h1 {
   margin-left: 5px; }
+@media only screen and (min-width: 800px) {
+  .booking-info {
+    display: flex;
+    flex-direction: row;
+    max-width: 1000px; } }
+
+@media only screen and (min-width: 800px) {
+  .booking-text,
+  .booking-form {
+    width: 50%; } }
 
 .contact-form {
   display: flex;
   flex-direction: column; }
   @media only screen and (min-width: 800px) {
     .contact-form {
-      width: 60%;
       margin: auto; } }
 
 .booking-inqueries {
@@ -1742,27 +1632,27 @@ header {
     font-size: 1.75em; } }
 @media only screen and (min-width: 450px) {
   .videos {
-    width: 75%;
+    width: 90%;
     margin: auto; }
 
   .photoPage {
-    width: 75%;
+    width: 90%;
     margin: auto; }
 
   .audio-page {
-    width: 75%;
+    width: 90%;
     margin: auto; }
 
   .bio-page {
-    width: 75%;
+    width: 90%;
     margin: auto; }
 
   .pressAndPerformance {
-    width: 75%;
+    width: 90%;
     margin: auto; }
 
   .booking-info {
-    width: 75%;
+    width: 90%;
     margin: auto; } }
 @media only screen and (min-width: 800px) {
   body {

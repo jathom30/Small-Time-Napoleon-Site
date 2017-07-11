@@ -15,8 +15,9 @@
         'base/mobile-view';
 
 // Background
-@import 'animation/background',
-        'animation/background-animation';
+@import 'animation/background-keyframes',
+        'animation/background-animation',
+        'animation/new-animation-background';
 
 // Main Page Divs
 @import 'main-page-sections/section-divs',
