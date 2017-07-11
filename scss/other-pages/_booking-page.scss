@@ -2,13 +2,25 @@
   h1 {
     margin-left: 5px;
   }
+  @media #{$lg-media} {
+    display: flex;
+    flex-direction: row;
+    max-width: 1000px;
+  }
+}
+
+.booking-text,
+.booking-form {
+  @media #{$lg-media} {
+    width: 50%;
+  }
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
   @media #{$lg-media} {
-    width: 60%;
+//    width: 40%;
     margin: auto;
   }
 }
