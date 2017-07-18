@@ -541,7 +541,8 @@ footer {
 .section {
   border-bottom: 1px dotted #fbb141;
   background: rgba(0, 0, 0, 0.35);
-  margin: 0; }
+  margin: 0;
+  z-index: 1; }
   @media only screen and (min-device-width: 320px) and (max-device-width: 736px) and (orientation: portrait) {
     .section {
       border-bottom: 3px dotted #fbb141; } }
@@ -600,6 +601,9 @@ footer {
     flex-direction: column;
     justify-content: space-around;
     min-height: 100vh; } }
+#video-players {
+  padding: 10px; }
+
 .social-media {
   padding: 1%;
   margin-bottom: 12%; }
@@ -689,9 +693,19 @@ footer {
     font-size: 2em; } }
 @keyframes blimp-bounce {
   0% {
-    transform: translate3d(0, -5%, 0); }
+    transform: translate3d(0, -8px, 0); }
   100% {
-    transform: translate3d(0, 5%, 0); } }
+    transform: translate3d(0, 8px, 0); } }
+@keyframes rotate-left {
+  0% {
+    transform: rotate(30deg); }
+  100% {
+    transform: rotate(0deg); } }
+@keyframes rotate-right {
+  0% {
+    transform: rotate(-30deg); }
+  100% {
+    transform: rotate(0deg); } }
 .background-container {
   position: fixed;
   display: block;
@@ -724,6 +738,14 @@ footer {
   position: absolute;
   width: 100%;
   height: 100%; }
+
+.spot-light {
+  transform-origin: bottom left;
+  animation: rotate-left 4.5s cubic-bezier(0.42, 0, 0.23, 1.37) forwards; }
+
+.spot-light-2 {
+  transform-origin: bottom right;
+  animation: rotate-right 5s cubic-bezier(0.42, 0, 0.23, 1.37) forwards; }
 
 .blimp {
   animation: blimp-bounce 2s ease-in-out alternate infinite; }
@@ -857,7 +879,7 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     margin: auto;
-    padding: 2%; }
+    padding: 5px; }
     @media only screen and (min-width: 450px) {
       #image-gallery ul {
         width: 75%; } }
@@ -1026,11 +1048,11 @@ footer {
   flex-flow: column wrap; }
   .calendar-content iframe {
     margin: auto;
-    margin-top: 5%;
-    margin-bottom: 5%; }
+    margin-top: 20px;
+    margin-bottom: 20px; }
     @media only screen and (min-width: 800px) {
       .calendar-content iframe {
-        margin-top: 5%; } }
+        margin-top: 20px; } }
 
 /********BOOKING/CONTACT**********/
 .contact-form {
@@ -1091,7 +1113,7 @@ footer {
 
 .to-more-pages a {
   display: block;
-  padding: 2%; }
+  padding: 5px; }
 
 .to-more-pages a:hover {
   filter: brightness(1.25); }

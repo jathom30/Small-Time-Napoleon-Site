@@ -39,7 +39,7 @@
     flex-wrap: wrap;
     justify-content: center;
     margin: auto;
-    padding: 2%;
+    padding: 5px;
     @media #{$sm-media} {
       width: 75%;
     }
@@ -257,10 +257,10 @@
   flex-flow: column wrap;
   iframe {
     margin: auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 20px;
+    margin-bottom: 20px;
     @media #{$lg-media} {
-      margin-top: 5%;
+      margin-top: 20px;
     }
   }
 }

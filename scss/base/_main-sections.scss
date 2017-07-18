@@ -4,6 +4,7 @@
   border-bottom: 1px dotted $gold;
   background: $deep-shadow;
   margin: 0;
+  z-index: 1;
   @media only screen and (min-device-width: 320px) and (max-device-width: 736px) and (orientation: portrait) {
     border-bottom: 3px dotted $gold;
   }
@@ -73,4 +74,7 @@
   }
 }
 
+#video-players {
+  padding: 10px;
+}
 
