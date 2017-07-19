@@ -44,41 +44,8 @@
   animation: rotate-right 5s cubic-bezier(0.42, 0, 0.23, 1.37) forwards;
 }
 
-//svg {
-//	width: 100%;
-//	height: 100%;
-//	position: absolute;
-//	top: 0;
-//	left: 0;
-//}
-
-//
-//.fifth-buildings {
-//  animation: fifth-slide 2s ease-in-out forwards;
-//}
-//
-//.fourth-buildings {
-//  animation: fourth-slide 2s ease-in-out forwards;
-//}
-//
-//.main-building {
-//  animation: main-slide 2s ease-in-out forwards;
-//}
-//
-//.third-buildings {
-//  animation: third-slide 2s ease-in-out forwards;
-//}
-//
-//.second-buildings {
-//  animation: second-slide 2s ease-in-out forwards;
-//}
-//
-//.front-buildings {
-//  animation: front-slide 2s ease-in-out forwards;
-//}
-
 .blimp {
-  animation: blimp-bounce 2s ease-in-out alternate infinite;
+  animation: blimp-rise 5s ease-in-out forwards, blimp-bounce 2s ease-in-out alternate infinite 5s;
 }
 
 

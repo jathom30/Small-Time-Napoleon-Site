@@ -691,6 +691,11 @@ footer {
   /**********Adjustments to Contact on Index***********/
   .contact-form button {
     font-size: 2em; } }
+@keyframes blimp-rise {
+  0% {
+    transform: translate3d(0, 800px, 0); }
+  100% {
+    transform: translate3d(0, 0, 0); } }
 @keyframes blimp-bounce {
   0% {
     transform: translate3d(0, -8px, 0); }
@@ -748,7 +753,7 @@ footer {
   animation: rotate-right 5s cubic-bezier(0.42, 0, 0.23, 1.37) forwards; }
 
 .blimp {
-  animation: blimp-bounce 2s ease-in-out alternate infinite; }
+  animation: blimp-rise 5s ease-in-out forwards, blimp-bounce 2s ease-in-out alternate infinite 5s; }
 
 @media only screen and (min-width: 800px) {
   #image-gallery {
